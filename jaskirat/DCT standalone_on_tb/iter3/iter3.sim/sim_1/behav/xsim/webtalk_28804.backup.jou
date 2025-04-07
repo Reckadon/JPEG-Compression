@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Apr  4 22:26:02 2025
+# Process ID: 28804
+# Current directory: C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/code3/iter3/iter3.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/code3/iter3/iter3.sim/sim_1/behav/xsim/xsim.dir/tb_dct_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/code3/iter3/iter3.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/code3/iter3/iter3.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/GSRAJA/Desktop/IIT -notrace
