@@ -27,13 +27,18 @@ module dct_top (
    parameter TOTAL_PIXELS = NUM_BLOCKS * BLOCK_PIXELS; // 16384
 
    // FSM states.
-   reg [2:0] state;
+   reg [3:0] state;
+   reg [1:0] wait_time;
    localparam IDLE    = 3'd0,
+              WAIT_FOR_READ = 4'd8,
               READ    = 3'd1,
+              WAIT_FOR_PROCESS = 3'd6,
               PROCESS = 3'd2,
+              WAIT_FOR_WRITE = 3'd7,
               WRITE   = 3'd3,
               NEXT    = 3'd4,
-              DONE    = 3'd5;
+              DONE    = 3'd5,
+              WAIT_TIME = 3'd5;
 
    // Counters.
    reg [15:0] overall_pixel;   // overall pixel address: 0 to TOTAL_PIXELS-1
@@ -54,7 +59,7 @@ module dct_top (
    reg [14:0] temp_addr;       // Computed base write address (15 bits)
 
     
-    do_dct dct_process (
+do_dct dct_process (
    .clk(clk),
    .reset(reset),
    .start(dodct_start),
@@ -95,7 +100,8 @@ module dct_top (
                block_count   <= 0;
                done          <= 0;
                write_phase   <= 0;
-               state         <= READ;
+               wait_time     <= WAIT_TIME;
+               state         <= WAIT_FOR_READ;
             end
 
             // READ state: read one 8-bit pixel from orig BRAM and convert it.
@@ -106,7 +112,9 @@ module dct_top (
                orig_wea  <= 0;
                
                // Conversion: subtract 128 (centers value) then shift left by 5.
-               conv_pixel = ($signed({1'b0, pixel_data}) - 9'sd128) <<< 5;
+//               conv_pixel = ($signed({1'b0, pixel_data}) - 9'sd128) <<< 5;
+               conv_pixel = pixel_data <<< 8;
+               $display("original data = %d, converted = %d", pixel_data, conv_pixel);
                
                // Store the 16-bit converted pixel into the block register.
                dct_block_in[pixel_count*16 +: 16] <= conv_pixel;
@@ -114,7 +122,8 @@ module dct_top (
                // Prepare for next pixel.
                if (pixel_count == BLOCK_PIXELS-1) begin
                   pixel_count <= 0;
-                  state       <= PROCESS;
+                  wait_time     <= WAIT_TIME;
+                  state         <= WAIT_FOR_PROCESS;
                end else begin
                   pixel_count   <= pixel_count + 1;
                end
@@ -124,8 +133,8 @@ module dct_top (
             // PROCESS state: dummy DCT processing (pass-through).
             PROCESS: begin
                // For now, simply pass through the block.
-//               dct_block_out <= dct_block_in;
 //               // Reset write_phase for block write.
+//               dct_block_out <= dct_block_in;
 //               write_phase <= 0;
 //               pixel_count <= 0;
 //               state       <= WRITE;
@@ -133,13 +142,14 @@ module dct_top (
             dodct_start <= 1;
                // Once the do_dct module asserts done, capture its result.
                if (dodct_done) begin
-                  dct_block_out <= dct_block_in;//ct_result;
+                  dct_block_out <= dct_block_in; //dct_result;
                   dodct_start <= 0; // Clear the start for next block.
                   // Reset pixel counter for write.
                   write_phase <= 0;
                   pixel_count <= 0;
-                  state <= WRITE;
-            end
+                  wait_time     <= WAIT_TIME;
+                  state         <= WAIT_FOR_WRITE;
+               end
             end
 
 
@@ -179,8 +189,26 @@ module dct_top (
                   state <= DONE;
                end else begin
                   block_count <= block_count + 1;
-                  state       <= READ;
+                  state       <= WAIT_FOR_READ;
                end
+            end
+            
+            WAIT_FOR_WRITE: begin
+                wait_time = wait_time - 2'd1;
+                if (wait_time == 0)
+                    state <= WRITE;
+            end
+            
+            WAIT_FOR_PROCESS: begin
+                wait_time = wait_time - 2'd1;
+                if (wait_time == 0)
+                    state <= PROCESS;
+            end
+            
+            WAIT_FOR_READ: begin
+                wait_time = wait_time - 2'd1;
+                if (wait_time == 0)
+                    state <= READ;
             end
 
             DONE: begin
