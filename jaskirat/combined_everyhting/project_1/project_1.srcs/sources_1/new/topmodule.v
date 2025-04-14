@@ -18,6 +18,7 @@ reg wea_top;
 reg [13:0] addr_top;
 reg [7:0] din_top;
 wire [7:0] dout_top;
+
 blk_mem_gen_0 original(
     .clka(clk), 
     .ena(ena_top), 
@@ -33,6 +34,7 @@ reg wea_processed;
 reg [14:0] addr_processed;
 reg [7:0] din_processed;
 wire [7:0] dout_processed;
+
 blk_mem_gen_1 processed(
     .clka(clk), 
     .ena(ena_processed), 
@@ -74,7 +76,7 @@ wire [7:0] din_dct_proc1;
 reg [7:0] dout_dct_proc1;
 reg [7:0] dout_dct_orig;
 
-dct_top dct_inst (
+dct_top_2 dct_inst (
     .clk(clk),
     .reset(~dct_enable),
     .start(dct_start),
