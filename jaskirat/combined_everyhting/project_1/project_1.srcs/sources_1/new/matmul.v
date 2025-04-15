@@ -100,7 +100,7 @@ module matrix_mult_8x8_dsp #(
                     for (i = 0; i < 8; i = i + 1) begin
                         for (j = 0; j < 8; j = j + 1) begin
                             if (QUANTIZE)
-                                C[(i*8+j)*16 +: 16] <= accum[i][j][20:5] >> Q_mat[i][j];
+                                C[(i*8+j)*16 +: 16] <= $signed(accum[i][j][20:5]) >>> Q_mat[i][j];
                             else
                                 C[(i*8+j)*16 +: 16] <= accum[i][j][20:5];
                         end

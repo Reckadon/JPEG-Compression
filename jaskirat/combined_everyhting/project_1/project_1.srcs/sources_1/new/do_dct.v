@@ -48,7 +48,7 @@ module do_dct (
     );
 
     // Instantiate multiplier for stage 2: (D*X) * D^T 
-    matrix_mult_8x8_dsp #(.TRANSPOSE_B(1), .QUANTIZE(1)) mult2 (
+    matrix_mult_8x8_dsp #(.TRANSPOSE_B(1), .QUANTIZE(0)) mult2 (
         .clk(clk),
         .s_clk(s_clk),
         .reset(reset),
