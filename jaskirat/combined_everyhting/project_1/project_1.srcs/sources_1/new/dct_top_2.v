@@ -27,7 +27,7 @@ parameter BLOCK_PIXELS = 64;
 parameter TOTAL_PIXELS = NUM_BLOCKS * BLOCK_PIXELS; // 16384
 
 // FSM states.
-reg [2:0] wait_time;
+reg [6:0] wait_time;
 localparam IDLE    = 3'd0,
           ENABLE = 4'd9,
           WAIT_FOR_READ = 4'd8,
@@ -38,7 +38,9 @@ localparam IDLE    = 3'd0,
           WRITE   = 3'd3,
           NEXT    = 3'd4,
           DONE    = 3'd5,
-          WAIT_TIME = 3'd7;
+          WAIT_TIME = 3'd7,
+          PROCESS_TIME = 'd120;
+          
 
 // Counters.
 reg [15:0] overall_pixel = 0;   // overall pixel address: 0 to TOTAL_PIXELS-1
@@ -48,7 +50,7 @@ reg [7:0] block_count = 0;      // block counter (0 to NUM_BLOCKS-1)
 // Block registers (each block is 64 pixels, each pixel is 16-bit).
 reg [1023:0] dct_block_in;
 reg [1023:0] dct_block_out;
-reg dodct_start;
+reg dodct_start = 0;
 wire dodct_done;
 wire [1023:0] dct_result;
 // Temporary registers.
@@ -58,10 +60,11 @@ reg write_phase;            // 0: write upper 8 bits, 1: write lower 8 bits
 reg [13:0] read_addr;       // Computed read address (14 bits)
 reg [14:0] temp_addr;       // Computed base write address (15 bits)
 
-    
+reg process_reset;
+
 do_dct dct_process (
    .clk(clk),
-   .reset(reset),
+   .reset(process_reset),
    .start(dodct_start),
    .block_in(dct_block_in),
    .block_out(dct_result),
@@ -91,6 +94,7 @@ begin
             // Clear block registers.
             dct_block_in  <= 0;
             dct_block_out <= 0;
+            process_reset <= 1;
             if (start) begin
                 wait_time     <= WAIT_TIME;
                 state         <= ENABLE;
@@ -127,8 +131,9 @@ begin
             overall_pixel <= overall_pixel + 1;
             if (pixel_count == BLOCK_PIXELS-1) begin
                 pixel_count <= 0;
-                wait_time     <= WAIT_TIME;
+                wait_time     <= PROCESS_TIME;
                 state         <= WAIT_FOR_PROCESS;
+                process_reset <= 0;
             end else begin
                 pixel_count   <= pixel_count + 1;
                 wait_time     <= WAIT_TIME;
@@ -138,34 +143,29 @@ begin
         
         
         WAIT_FOR_PROCESS: begin
-            wait_time <= wait_time - 3'd1;
-            if (wait_time == 0)
+            if (wait_time == PROCESS_TIME)
+                dodct_start <= 1;
+            else if (wait_time == 0)
                 state <= PROCESS;
             else
                 state <= WAIT_FOR_PROCESS;
+                
+            wait_time <= wait_time - 3'd1;          
         end
         
         
      // PROCESS state: dummy DCT processing (pass-through).
         PROCESS: begin
-           // For now, simply pass through the block.
-//               // Reset write_phase for block write.
-//               dct_block_out <= dct_block_in;
-//               write_phase <= 0;
-//               pixel_count <= 0;
-//               state       <= WRITE;
-
-            dodct_start <= 1;
-           // Once the do_dct module asserts done, capture its result.
-           if (dodct_done) begin
-              dct_block_out <= dct_block_in; //dct_result;
-              dodct_start <= 0; // Clear the start for next block.
-              // Reset pixel counter for write.
-              write_phase <= 0;
-              pixel_count <= 0;
-              wait_time     <= WAIT_TIME;
-              state         <= WAIT_FOR_WRITE;
-           end
+  
+          dct_block_out <= dct_result;//dct_block_in; //dct_result;
+          dodct_start <= 0; // Clear the start for next block.
+          process_reset <= 1;
+          // Reset pixel counter for write.
+          write_phase <= 0;
+          pixel_count <= 0;
+          wait_time     <= WAIT_TIME;
+          state         <= WAIT_FOR_WRITE;
+          
         end
         
         
