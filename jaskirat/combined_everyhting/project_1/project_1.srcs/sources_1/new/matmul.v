@@ -1,9 +1,11 @@
 `timescale 1ns / 1ps
 
 module matrix_mult_8x8_dsp #(
-    parameter TRANSPOSE_B = 0
+    parameter TRANSPOSE_B = 0,
+                QUANTIZE = 0
 ) (
     input clk,
+    input s_clk,
     input reset,
     input enable,
     input [1023:0] A, // 8x8 matrix, each element 16-bit Q11.5
@@ -28,11 +30,32 @@ module matrix_mult_8x8_dsp #(
                READY =   3'b100;
                
     integer i, j;
-
-
+    
+    // Quantization Matrix (Q)
+    reg [2:0] Q_mat [0:7][0:7];
+    
+    // Initialize Q_mat
+    initial begin
+        Q_mat[0][0] = 3'd4; Q_mat[0][1] = 3'd3; Q_mat[0][2] = 3'd3; Q_mat[0][3] = 3'd4;
+        Q_mat[0][4] = 3'd5; Q_mat[0][5] = 3'd5; Q_mat[0][6] = 3'd6; Q_mat[0][7] = 3'd6;
+        Q_mat[1][0] = 3'd3; Q_mat[1][1] = 3'd3; Q_mat[1][2] = 3'd4; Q_mat[1][3] = 3'd4;
+        Q_mat[1][4] = 3'd5; Q_mat[1][5] = 3'd6; Q_mat[1][6] = 3'd6; Q_mat[1][7] = 3'd6;
+        Q_mat[2][0] = 3'd4; Q_mat[2][1] = 3'd4; Q_mat[2][2] = 3'd4; Q_mat[2][3] = 3'd5;
+        Q_mat[2][4] = 3'd5; Q_mat[2][5] = 3'd6; Q_mat[2][6] = 3'd6; Q_mat[2][7] = 3'd6;
+        Q_mat[3][0] = 3'd4; Q_mat[3][1] = 3'd4; Q_mat[3][2] = 3'd4; Q_mat[3][3] = 3'd5;
+        Q_mat[3][4] = 3'd6; Q_mat[3][5] = 3'd6; Q_mat[3][6] = 3'd6; Q_mat[3][7] = 3'd6;
+        Q_mat[4][0] = 3'd4; Q_mat[4][1] = 3'd4; Q_mat[4][2] = 3'd5; Q_mat[4][3] = 3'd6;
+        Q_mat[4][4] = 3'd6; Q_mat[4][5] = 3'd7; Q_mat[4][6] = 3'd7; Q_mat[4][7] = 3'd6;
+        Q_mat[5][0] = 3'd5; Q_mat[5][1] = 3'd5; Q_mat[5][2] = 3'd6; Q_mat[5][3] = 3'd6;
+        Q_mat[5][4] = 3'd6; Q_mat[5][5] = 3'd7; Q_mat[5][6] = 3'd7; Q_mat[5][7] = 3'd6;
+        Q_mat[6][0] = 3'd6; Q_mat[6][1] = 3'd6; Q_mat[6][2] = 3'd6; Q_mat[6][3] = 3'd6;
+        Q_mat[6][4] = 3'd7; Q_mat[6][5] = 3'd7; Q_mat[6][6] = 3'd7; Q_mat[6][7] = 3'd7;
+        Q_mat[7][0] = 3'd6; Q_mat[7][1] = 3'd6; Q_mat[7][2] = 3'd6; Q_mat[7][3] = 3'd6;
+        Q_mat[7][4] = 3'd7; Q_mat[7][5] = 3'd7; Q_mat[7][6] = 3'd7; Q_mat[7][7] = 3'd7;
+    end
 
     // Main state machine using DSP slices for MAC operations
-    always @(posedge clk or posedge reset) begin
+    always @(posedge s_clk or posedge reset) begin
         if (reset) begin
             state <= IDLE;
             done <= 0;
@@ -76,7 +99,10 @@ module matrix_mult_8x8_dsp #(
                     // Here we select bits [20:5] of the accumulator for each element.
                     for (i = 0; i < 8; i = i + 1) begin
                         for (j = 0; j < 8; j = j + 1) begin
-                            C[(i*8+j)*16 +: 16] <= accum[i][j][20:5];
+                            if (QUANTIZE)
+                                C[(i*8+j)*16 +: 16] <= accum[i][j][20:5] >> Q_mat[i][j];
+                            else
+                                C[(i*8+j)*16 +: 16] <= accum[i][j][20:5];
                         end
                     end
                     state <= READY;

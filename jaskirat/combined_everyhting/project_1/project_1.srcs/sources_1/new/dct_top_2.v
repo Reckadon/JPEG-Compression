@@ -2,6 +2,7 @@
 
 module dct_top_2 (
    input clk,
+   input s_clk,
    input reset,
    input start,
    output reg done,
@@ -27,7 +28,7 @@ parameter BLOCK_PIXELS = 64;
 parameter TOTAL_PIXELS = NUM_BLOCKS * BLOCK_PIXELS; // 16384
 
 // FSM states.
-reg [6:0] wait_time;
+reg [7:0] wait_time;
 localparam IDLE    = 3'd0,
           ENABLE = 4'd9,
           WAIT_FOR_READ = 4'd8,
@@ -39,7 +40,7 @@ localparam IDLE    = 3'd0,
           NEXT    = 3'd4,
           DONE    = 3'd5,
           WAIT_TIME = 3'd7,
-          PROCESS_TIME = 'd200;
+          PROCESS_TIME = 'd80;
           
 
 // Counters.
@@ -64,6 +65,7 @@ reg process_reset;
 
 do_dct dct_process (
    .clk(clk),
+   .s_clk(s_clk),
    .reset(process_reset),
    .start(dodct_start),
    .block_in(dct_block_in),
@@ -73,7 +75,7 @@ do_dct dct_process (
 
 reg [3:0] state = IDLE;
 
-always @ (posedge clk)
+always @ (posedge s_clk)
 begin
     case(state)
     
@@ -94,6 +96,7 @@ begin
             // Clear block registers.
             dct_block_in  <= 0;
             dct_block_out <= 0;
+            dodct_start <= 0;
             process_reset <= 1;
             if (start) begin
                 wait_time     <= WAIT_TIME;
@@ -121,7 +124,7 @@ begin
         
         
         READ: begin
-            pixel_data = orig_dout;  // get the latest value then move ahead
+            pixel_data = orig_dout; // get the latest value then move ahead
             
             conv_pixel = ($signed({1'b0, pixel_data}) - 9'sd128) <<< 5;
             

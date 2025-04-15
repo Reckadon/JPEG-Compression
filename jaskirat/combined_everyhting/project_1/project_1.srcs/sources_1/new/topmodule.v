@@ -12,6 +12,9 @@ module topmodule(
     output dct_done  // Flag for dct done
 );
 
+wire s_clk;
+slow_clock_gen #(.DIV_FACTOR(10_000)) slow_clk (clk, s_clk);
+
 // BRAM to store the original image
 reg ena_top;
 reg wea_top;
@@ -78,6 +81,7 @@ reg [7:0] dout_dct_orig;
 
 dct_top_2 dct_inst (
     .clk(clk),
+    .s_clk(s_clk),
     .reset(~dct_enable),
     .start(dct_start),
     .done(dct_done),
