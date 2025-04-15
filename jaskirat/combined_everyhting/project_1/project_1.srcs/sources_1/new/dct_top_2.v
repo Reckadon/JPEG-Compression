@@ -39,7 +39,7 @@ localparam IDLE    = 3'd0,
           NEXT    = 3'd4,
           DONE    = 3'd5,
           WAIT_TIME = 3'd7,
-          PROCESS_TIME = 'd120;
+          PROCESS_TIME = 'd200;
           
 
 // Counters.

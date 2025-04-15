@@ -308,13 +308,6 @@ module do_dct (
         .done(mult2_done)
     );
 
-    // Pack the contents of the coefficient ROM (bram_D) into a 1024-bit bus
-    // This bus is used as the A operand for mult1.
-    always @(*) begin
-        for(i = 0; i < 64; i = i + 1)
-            mat_A[i*16 +: 16] = bram_D[i];
-    end
-
     // For the B operand: In stage MUL1 we use X (from bram_X), and in stage MUL2 we use D (from bram_D)
     always @(*) begin
         if(state == MUL1)
@@ -334,7 +327,13 @@ module do_dct (
             // In practice, replace these dummy values with the output of your Python script.
 //            for(i = 0; i < 64; i = i + 1)
 //                bram_D[i] <= 16'h0100; // dummy value = 1.0 (Q8.8); update with real DCT coefficients
-bram_D[0] <= 16'h000B; bram_D[1] <= 16'h000B; bram_D[2] <= 16'h000B; bram_D[3] <= 16'h000B; bram_D[4] <= 16'h000B; bram_D[5] <= 16'h000B; bram_D[6] <= 16'h000B; bram_D[7] <= 16'h000B; bram_D[8] <= 16'h0010; bram_D[9] <= 16'h000D; bram_D[10] <= 16'h0009; bram_D[11] <= 16'h0003; bram_D[12] <= 16'hFFFD; bram_D[13] <= 16'hFFF7; bram_D[14] <= 16'hFFF3; bram_D[15] <= 16'hFFF0; bram_D[16] <= 16'h000F; bram_D[17] <= 16'h0006; bram_D[18] <= 16'hFFFA; bram_D[19] <= 16'hFFF1; bram_D[20] <= 16'hFFF1; bram_D[21] <= 16'hFFFA; bram_D[22] <= 16'h0006; bram_D[23] <= 16'h000F; bram_D[24] <= 16'h000D; bram_D[25] <= 16'hFFFD; bram_D[26] <= 16'hFFF0; bram_D[27] <= 16'hFFF7; bram_D[28] <= 16'h0009; bram_D[29] <= 16'h0010; bram_D[30] <= 16'h0003; bram_D[31] <= 16'hFFF3; bram_D[32] <= 16'h000B; bram_D[33] <= 16'hFFF5; bram_D[34] <= 16'hFFF5; bram_D[35] <= 16'h000B; bram_D[36] <= 16'h000B; bram_D[37] <= 16'hFFF5; bram_D[38] <= 16'hFFF5; bram_D[39] <= 16'h000B; bram_D[40] <= 16'h0009; bram_D[41] <= 16'hFFF0; bram_D[42] <= 16'h0003; bram_D[43] <= 16'h000D; bram_D[44] <= 16'hFFF3; bram_D[45] <= 16'hFFFD; bram_D[46] <= 16'h0010; bram_D[47] <= 16'hFFF7; bram_D[48] <= 16'h0006; bram_D[49] <= 16'hFFF1; bram_D[50] <= 16'h000F; bram_D[51] <= 16'hFFFA; bram_D[52] <= 16'hFFFA; bram_D[53] <= 16'h000F; bram_D[54] <= 16'hFFF1; bram_D[55] <= 16'h0006; bram_D[56] <= 16'h0003; bram_D[57] <= 16'hFFF7; bram_D[58] <= 16'h000D; bram_D[59] <= 16'hFFF0; bram_D[60] <= 16'h0010; bram_D[61] <= 16'hFFF3; bram_D[62] <= 16'h0009; bram_D[63] <= 16'hFFFD;
+            bram_D[0] <= 16'h000B; bram_D[1] <= 16'h000B; bram_D[2] <= 16'h000B; bram_D[3] <= 16'h000B; bram_D[4] <= 16'h000B; bram_D[5] <= 16'h000B; bram_D[6] <= 16'h000B; bram_D[7] <= 16'h000B; bram_D[8] <= 16'h0010; bram_D[9] <= 16'h000D; bram_D[10] <= 16'h0009; bram_D[11] <= 16'h0003; bram_D[12] <= 16'hFFFD; bram_D[13] <= 16'hFFF7; bram_D[14] <= 16'hFFF3; bram_D[15] <= 16'hFFF0; bram_D[16] <= 16'h000F; bram_D[17] <= 16'h0006; bram_D[18] <= 16'hFFFA; bram_D[19] <= 16'hFFF1; bram_D[20] <= 16'hFFF1; bram_D[21] <= 16'hFFFA; bram_D[22] <= 16'h0006; bram_D[23] <= 16'h000F; bram_D[24] <= 16'h000D; bram_D[25] <= 16'hFFFD; bram_D[26] <= 16'hFFF0; bram_D[27] <= 16'hFFF7; bram_D[28] <= 16'h0009; bram_D[29] <= 16'h0010; bram_D[30] <= 16'h0003; bram_D[31] <= 16'hFFF3; bram_D[32] <= 16'h000B; bram_D[33] <= 16'hFFF5; bram_D[34] <= 16'hFFF5; bram_D[35] <= 16'h000B; bram_D[36] <= 16'h000B; bram_D[37] <= 16'hFFF5; bram_D[38] <= 16'hFFF5; bram_D[39] <= 16'h000B; bram_D[40] <= 16'h0009; bram_D[41] <= 16'hFFF0; bram_D[42] <= 16'h0003; bram_D[43] <= 16'h000D; bram_D[44] <= 16'hFFF3; bram_D[45] <= 16'hFFFD; bram_D[46] <= 16'h0010; bram_D[47] <= 16'hFFF7; bram_D[48] <= 16'h0006; bram_D[49] <= 16'hFFF1; bram_D[50] <= 16'h000F; bram_D[51] <= 16'hFFFA; bram_D[52] <= 16'hFFFA; bram_D[53] <= 16'h000F; bram_D[54] <= 16'hFFF1; bram_D[55] <= 16'h0006; bram_D[56] <= 16'h0003; bram_D[57] <= 16'hFFF7; bram_D[58] <= 16'h000D; bram_D[59] <= 16'hFFF0; bram_D[60] <= 16'h0010; bram_D[61] <= 16'hFFF3; bram_D[62] <= 16'h0009; bram_D[63] <= 16'hFFFD;
+            
+            // Pack the contents of the coefficient ROM (bram_D) into a 1024-bit bus
+            // This bus is used as the A operand for mult1.
+            for(i = 0; i < 64; i = i + 1)
+                mat_A[i*16 +: 16] = bram_D[i];
+            
         end else begin
             case(state)
                 IDLE: begin
@@ -342,6 +341,7 @@ bram_D[0] <= 16'h000B; bram_D[1] <= 16'h000B; bram_D[2] <= 16'h000B; bram_D[3] <
                     if(start)
                         state <= MUL1;
                 end
+                
                 MUL1: begin
                     if(mult_done) begin
                         // Capture the intermediate result into bram_B2 and into a register for the next multiplier
