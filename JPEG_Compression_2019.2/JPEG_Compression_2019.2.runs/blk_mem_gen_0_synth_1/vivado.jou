@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Apr 16 15:31:48 2025
+# Process ID: 25820
+# Current directory: C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/JPEG-Compression/JPEG_Compression_2019.2/JPEG_Compression_2019.2.runs/blk_mem_gen_0_synth_1
+# Command line: vivado.exe -log blk_mem_gen_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source blk_mem_gen_0.tcl
+# Log file: C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/JPEG-Compression/JPEG_Compression_2019.2/JPEG_Compression_2019.2.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.vds
+# Journal file: C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/JPEG-Compression/JPEG_Compression_2019.2/JPEG_Compression_2019.2.runs/blk_mem_gen_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source blk_mem_gen_0.tcl -notrace
