@@ -8,3 +8,5 @@ JPEG Compression Algorithm implemented on FPGA | ES 204: Digital Systems Course 
 1. [dracarys.bit](./Bitstreams/dracarys.bit): No Quantization
 2. [detonator.bit](./Bitstreams/detonator.bit): With Quantization
 
+---
+(Project Done)
