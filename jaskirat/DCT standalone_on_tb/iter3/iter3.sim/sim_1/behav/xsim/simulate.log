@@ -1,0 +1,11 @@
+Time resolution is 1 ps
+Final DCT Result (each element in Q8.8):
+0f1c 007e 04b7 03e7 03f1 02c2 022a 013d 
+fe61 fa9b fc2e fc18 fc70 fd73 fe00 ffbf 
+fdb8 fd7b fcfc fd69 fd82 fee4 ff68 0066 
+0502 07ee 07f4 064c 0549 051b 02fd 0196 
+fc78 fac7 fb16 fb49 fc69 fcf9 fe50 ff41 
+fec1 fe92 fe7a fedb ff71 ff95 ff2b ffa7 
+04ff 06ec 06e4 05d8 04d2 03db 0313 018b 
+fbfb f8cf f9e9 fafb fbb1 fc9f fdf3 feb2 
+$finish called at time : 285 ns : File "D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/DCT standalone_on_tb/iter3/iter3.srcs/sim_1/new/dct_test_tb.v" Line 48

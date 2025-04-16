@@ -3,196 +3,321 @@
     with args -log topmodule.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source topmodule.tcl
 
 
-****** Vivado v2019.2 (64-bit)
-  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
-  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
-Sourcing tcl script 'C:/Users/GSRAJA/AppData/Roaming/Xilinx/Vivado/Vivado_init.tcl'
+****** Vivado v2024.2.1 (64-bit)
+  **** SW Build 5266912 on Sun Dec 15 09:03:24 MST 2024
+  **** IP Build 5264866 on Sun Dec 15 16:27:47 MST 2024
+  **** SharedData Build 5264680 on Wed Dec 11 12:48:36 MST 2024
+  **** Start of session at: Wed Apr 16 14:03:28 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
 source topmodule.tcl -notrace
-WARNING: [Board 49-91] Board repository path 'D:XilinxVivado?4.2dataoardsoard_files' does not exist, it will not be used to search board files.
-WARNING: [Board 49-91] Board repository path 'D:XilinxVivado?4.2dataoardsoard_files' does not exist, it will not be used to search board files.
 Command: synth_design -top topmodule -part xc7a35tcpg236-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
-INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 40288 
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 7692
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1202.156 ; gain = 226.844
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 975.605 ; gain = 467.242
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'topmodule' [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/sources_1/new/topmodule.v:3]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.runs/synth_1/.Xil/Vivado-32740-LAPTOP-G38HQLEP/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (1#1) [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.runs/synth_1/.Xil/Vivado-32740-LAPTOP-G38HQLEP/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.runs/synth_1/.Xil/Vivado-32740-LAPTOP-G38HQLEP/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (2#1) [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.runs/synth_1/.Xil/Vivado-32740-LAPTOP-G38HQLEP/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'imrx' [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/sources_1/new/imrx.v:3]
-	Parameter clk_freq bound to: 100000000 - type: integer 
-	Parameter baud_rate bound to: 9600 - type: integer 
-	Parameter div_sample bound to: 4 - type: integer 
-	Parameter div_counter bound to: 2604 - type: integer 
-	Parameter mid_sample bound to: 2 - type: integer 
-	Parameter div_bit bound to: 10 - type: integer 
-INFO: [Synth 8-226] default block is never used [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/sources_1/new/imrx.v:89]
-INFO: [Synth 8-4471] merging register 'inc_bytecounter_reg' into 'wea_reg' [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/sources_1/new/imrx.v:83]
-WARNING: [Synth 8-6014] Unused sequential element inc_bytecounter_reg was removed.  [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/sources_1/new/imrx.v:83]
-INFO: [Synth 8-6155] done synthesizing module 'imrx' (3#1) [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/sources_1/new/imrx.v:3]
-INFO: [Synth 8-6157] synthesizing module 'dct_top' [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/sources_1/new/dct_top.v:3]
-	Parameter NUM_BLOCKS bound to: 256 - type: integer 
-	Parameter BLOCK_PIXELS bound to: 64 - type: integer 
-	Parameter TOTAL_PIXELS bound to: 16384 - type: integer 
-	Parameter IDLE bound to: 3'b000 
-	Parameter READ bound to: 3'b001 
-	Parameter PROCESS bound to: 3'b010 
-	Parameter WRITE bound to: 3'b011 
-	Parameter NEXT bound to: 3'b100 
-	Parameter DONE bound to: 3'b101 
-INFO: [Synth 8-6157] synthesizing module 'do_dct' [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/sources_1/new/do_dct.v:119]
-	Parameter IDLE bound to: 2'b00 
-	Parameter MUL1 bound to: 2'b01 
-	Parameter MUL2 bound to: 2'b10 
-	Parameter DONE bound to: 2'b11 
-INFO: [Synth 8-6157] synthesizing module 'matrix_mult_8x8_dsp' [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/sources_1/new/matmul.v:3]
+INFO: [Synth 8-6157] synthesizing module 'topmodule' [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/topmodule.v:3]
+INFO: [Synth 8-6157] synthesizing module 'slow_clock_gen' [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/slow_clock.v:1]
+	Parameter DIV_FACTOR bound to: 1000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'slow_clock_gen' (0#1) [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/slow_clock.v:1]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.runs/synth_1/.Xil/Vivado-46028-Romits-Laptop/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (0#1) [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.runs/synth_1/.Xil/Vivado-46028-Romits-Laptop/realtime/blk_mem_gen_0_stub.v:6]
+WARNING: [Synth 8-689] width (14) of port connection 'addra' does not match port width (15) of module 'blk_mem_gen_0' [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/topmodule.v:29]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.runs/synth_1/.Xil/Vivado-46028-Romits-Laptop/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (0#1) [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.runs/synth_1/.Xil/Vivado-46028-Romits-Laptop/realtime/blk_mem_gen_1_stub.v:6]
+WARNING: [Synth 8-689] width (15) of port connection 'addra' does not match port width (16) of module 'blk_mem_gen_1' [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/topmodule.v:45]
+INFO: [Synth 8-6157] synthesizing module 'imrx' [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/imrx.v:3]
+INFO: [Synth 8-226] default block is never used [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/imrx.v:89]
+INFO: [Synth 8-6155] done synthesizing module 'imrx' (0#1) [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/imrx.v:3]
+INFO: [Synth 8-6157] synthesizing module 'dct_top_2' [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/dct_top_2.v:3]
+INFO: [Synth 8-6157] synthesizing module 'do_dct' [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:3]
+INFO: [Synth 8-6157] synthesizing module 'matrix_mult_8x8_dsp' [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:3]
 	Parameter TRANSPOSE_B bound to: 0 - type: integer 
-	Parameter IDLE bound to: 2'b00 
-	Parameter LOAD bound to: 2'b01 
-	Parameter COMPUTE bound to: 2'b10 
-	Parameter DONE_ST bound to: 2'b11 
-WARNING: [Synth 8-5856] 3D RAM matA_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
-WARNING: [Synth 8-5856] 3D RAM matB_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
-WARNING: [Synth 8-5856] 3D RAM accum_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
-WARNING: [Synth 8-5788] Register C_reg in module matrix_mult_8x8_dsp is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/sources_1/new/matmul.v:82]
-INFO: [Synth 8-6155] done synthesizing module 'matrix_mult_8x8_dsp' (4#1) [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/sources_1/new/matmul.v:3]
-INFO: [Synth 8-6157] synthesizing module 'matrix_mult_8x8_dsp__parameterized0' [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/sources_1/new/matmul.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:43]
+INFO: [Synth 8-6155] done synthesizing module 'matrix_mult_8x8_dsp' (0#1) [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:3]
+INFO: [Synth 8-6157] synthesizing module 'matrix_mult_8x8_dsp__parameterized0' [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:3]
 	Parameter TRANSPOSE_B bound to: 1 - type: integer 
-	Parameter IDLE bound to: 2'b00 
-	Parameter LOAD bound to: 2'b01 
-	Parameter COMPUTE bound to: 2'b10 
-	Parameter DONE_ST bound to: 2'b11 
-WARNING: [Synth 8-5856] 3D RAM matA_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
-WARNING: [Synth 8-5856] 3D RAM matB_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
-WARNING: [Synth 8-5856] 3D RAM accum_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
-WARNING: [Synth 8-5788] Register C_reg in module matrix_mult_8x8_dsp__parameterized0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/sources_1/new/matmul.v:82]
-INFO: [Synth 8-6155] done synthesizing module 'matrix_mult_8x8_dsp__parameterized0' (4#1) [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/sources_1/new/matmul.v:3]
-INFO: [Synth 8-226] default block is never used [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/sources_1/new/do_dct.v:205]
-INFO: [Synth 8-6155] done synthesizing module 'do_dct' (5#1) [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/sources_1/new/do_dct.v:119]
-WARNING: [Synth 8-6014] Unused sequential element read_addr_reg was removed.  [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/sources_1/new/dct_top.v:103]
-WARNING: [Synth 8-6014] Unused sequential element conv_pixel_reg was removed.  [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/sources_1/new/dct_top.v:109]
-WARNING: [Synth 8-6014] Unused sequential element temp_addr_reg was removed.  [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/sources_1/new/dct_top.v:150]
-WARNING: [Synth 8-5788] Register dodct_start_reg in module dct_top is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/sources_1/new/dct_top.v:60]
-INFO: [Synth 8-6155] done synthesizing module 'dct_top' (6#1) [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/sources_1/new/dct_top.v:3]
-INFO: [Synth 8-6157] synthesizing module 'imtx' [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/sources_1/new/imtx.v:3]
-INFO: [Synth 8-226] default block is never used [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/sources_1/new/imtx.v:76]
-INFO: [Synth 8-6155] done synthesizing module 'imtx' (7#1) [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/sources_1/new/imtx.v:3]
-WARNING: [Synth 8-7023] instance 'uut2' of module 'imtx' has 11 connections declared, but only 10 given [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/sources_1/new/topmodule.v:104]
-INFO: [Synth 8-6155] done synthesizing module 'topmodule' (8#1) [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/sources_1/new/topmodule.v:3]
-WARNING: [Synth 8-3331] design dct_top has unconnected port proc1_dout[7]
-WARNING: [Synth 8-3331] design dct_top has unconnected port proc1_dout[6]
-WARNING: [Synth 8-3331] design dct_top has unconnected port proc1_dout[5]
-WARNING: [Synth 8-3331] design dct_top has unconnected port proc1_dout[4]
-WARNING: [Synth 8-3331] design dct_top has unconnected port proc1_dout[3]
-WARNING: [Synth 8-3331] design dct_top has unconnected port proc1_dout[2]
-WARNING: [Synth 8-3331] design dct_top has unconnected port proc1_dout[1]
-WARNING: [Synth 8-3331] design dct_top has unconnected port proc1_dout[0]
-WARNING: [Synth 8-3331] design imrx has unconnected port dout[7]
-WARNING: [Synth 8-3331] design imrx has unconnected port dout[6]
-WARNING: [Synth 8-3331] design imrx has unconnected port dout[5]
-WARNING: [Synth 8-3331] design imrx has unconnected port dout[4]
-WARNING: [Synth 8-3331] design imrx has unconnected port dout[3]
-WARNING: [Synth 8-3331] design imrx has unconnected port dout[2]
-WARNING: [Synth 8-3331] design imrx has unconnected port dout[1]
-WARNING: [Synth 8-3331] design imrx has unconnected port dout[0]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:43]
+INFO: [Synth 8-6155] done synthesizing module 'matrix_mult_8x8_dsp__parameterized0' (0#1) [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'do_dct' (0#1) [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'dct_top_2' (0#1) [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/dct_top_2.v:3]
+INFO: [Synth 8-6157] synthesizing module 'imtx' [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/imtx.v:3]
+INFO: [Synth 8-226] default block is never used [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/imtx.v:76]
+INFO: [Synth 8-6155] done synthesizing module 'imtx' (0#1) [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/imtx.v:3]
+WARNING: [Synth 8-7071] port 'done' of module 'imtx' is unconnected for instance 'uut2' [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/topmodule.v:110]
+WARNING: [Synth 8-7023] instance 'uut2' of module 'imtx' has 11 connections declared, but only 10 given [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/topmodule.v:110]
+INFO: [Synth 8-6155] done synthesizing module 'topmodule' (0#1) [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/topmodule.v:3]
+WARNING: [Synth 8-6014] Unused sequential element inc_bytecounter_reg was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/imrx.v:83]
+WARNING: [Synth 8-7137] Register matA_reg[0][0] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[0][1] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[0][2] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[0][3] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[0][4] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[0][5] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[0][6] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[0][7] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[1][0] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[1][1] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[1][2] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[1][3] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[1][4] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[1][5] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[1][6] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[1][7] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[2][0] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[2][1] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[2][2] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[2][3] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[2][4] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[2][5] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[2][6] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[2][7] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[3][0] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[3][1] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[3][2] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[3][3] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[3][4] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[3][5] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[3][6] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[3][7] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[4][0] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[4][1] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[4][2] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[4][3] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[4][4] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[4][5] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[4][6] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[4][7] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[5][0] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[5][1] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[5][2] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[5][3] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[5][4] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[5][5] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[5][6] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[5][7] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[6][0] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[6][1] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[6][2] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[6][3] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[6][4] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[6][5] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[6][6] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[6][7] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[7][0] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[7][1] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[7][2] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[7][3] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[7][4] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[7][5] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[7][6] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matA_reg[7][7] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:48]
+WARNING: [Synth 8-7137] Register matB_reg[0][0] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+WARNING: [Synth 8-7137] Register matB_reg[0][1] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+WARNING: [Synth 8-7137] Register matB_reg[0][2] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+WARNING: [Synth 8-7137] Register matB_reg[0][3] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+WARNING: [Synth 8-7137] Register matB_reg[0][4] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+WARNING: [Synth 8-7137] Register matB_reg[0][5] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+WARNING: [Synth 8-7137] Register matB_reg[0][6] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+WARNING: [Synth 8-7137] Register matB_reg[0][7] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+WARNING: [Synth 8-7137] Register matB_reg[1][0] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+WARNING: [Synth 8-7137] Register matB_reg[1][1] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+WARNING: [Synth 8-7137] Register matB_reg[1][2] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+WARNING: [Synth 8-7137] Register matB_reg[1][3] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+WARNING: [Synth 8-7137] Register matB_reg[1][4] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+WARNING: [Synth 8-7137] Register matB_reg[1][5] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+WARNING: [Synth 8-7137] Register matB_reg[1][6] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+WARNING: [Synth 8-7137] Register matB_reg[1][7] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+WARNING: [Synth 8-7137] Register matB_reg[2][0] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+WARNING: [Synth 8-7137] Register matB_reg[2][1] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+WARNING: [Synth 8-7137] Register matB_reg[2][2] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+WARNING: [Synth 8-7137] Register matB_reg[2][3] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+WARNING: [Synth 8-7137] Register matB_reg[2][4] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+WARNING: [Synth 8-7137] Register matB_reg[2][5] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+WARNING: [Synth 8-7137] Register matB_reg[2][6] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+WARNING: [Synth 8-7137] Register matB_reg[2][7] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+WARNING: [Synth 8-7137] Register matB_reg[3][0] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+WARNING: [Synth 8-7137] Register matB_reg[3][1] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+WARNING: [Synth 8-7137] Register matB_reg[3][2] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+WARNING: [Synth 8-7137] Register matB_reg[3][3] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+WARNING: [Synth 8-7137] Register matB_reg[3][4] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+WARNING: [Synth 8-7137] Register matB_reg[3][5] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+WARNING: [Synth 8-7137] Register matB_reg[3][6] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+WARNING: [Synth 8-7137] Register matB_reg[3][7] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+WARNING: [Synth 8-7137] Register matB_reg[4][0] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+WARNING: [Synth 8-7137] Register matB_reg[4][1] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+WARNING: [Synth 8-7137] Register matB_reg[4][2] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+WARNING: [Synth 8-7137] Register matB_reg[4][3] in module matrix_mult_8x8_dsp has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v:49]
+INFO: [Common 17-14] Message 'Synth 8-7137' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[0] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[1] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[2] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[3] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[4] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[5] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[6] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[7] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[8] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[9] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[10] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[11] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[12] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[13] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[14] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[15] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[16] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[17] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[18] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[19] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[20] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[21] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[22] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[23] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[24] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[25] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[26] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[27] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[28] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[29] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[30] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[31] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[32] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[33] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[34] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[35] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[36] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[37] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[38] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[39] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[40] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[41] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[42] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[43] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[44] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[45] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[46] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[47] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[48] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[49] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[50] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[51] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[52] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[53] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[54] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[55] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[56] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[57] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[58] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[59] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[60] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[61] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[62] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element bram_B2_reg[63] was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v:97]
+WARNING: [Synth 8-6014] Unused sequential element pixel_data_reg was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/dct_top_2.v:127]
+WARNING: [Synth 8-6014] Unused sequential element conv_pixel_reg was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/dct_top_2.v:129]
+WARNING: [Synth 8-6014] Unused sequential element temp_addr_reg was removed.  [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/dct_top_2.v:187]
+WARNING: [Synth 8-7129] Port clk in module matrix_mult_8x8_dsp__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module matrix_mult_8x8_dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module dct_top_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port proc1_dout[7] in module dct_top_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port proc1_dout[6] in module dct_top_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port proc1_dout[5] in module dct_top_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port proc1_dout[4] in module dct_top_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port proc1_dout[3] in module dct_top_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port proc1_dout[2] in module dct_top_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port proc1_dout[1] in module dct_top_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port proc1_dout[0] in module dct_top_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dout[7] in module imrx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dout[6] in module imrx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dout[5] in module imrx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dout[4] in module imrx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dout[3] in module imrx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dout[2] in module imrx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dout[1] in module imrx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dout[0] in module imrx is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1294.836 ; gain = 319.523
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1131.844 ; gain = 623.480
 ---------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1294.836 ; gain = 319.523
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1131.844 ; gain = 623.480
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1294.836 ; gain = 319.523
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1131.844 ; gain = 623.480
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.183 . Memory (MB): peak = 1294.836 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.189 . Memory (MB): peak = 1131.844 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'processed'
-Finished Parsing XDC File [c:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'processed'
-Parsing XDC File [c:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/sources_1/ip/blk_mem_gen_0_3/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'original'
-Finished Parsing XDC File [c:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/sources_1/ip/blk_mem_gen_0_3/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'original'
-Parsing XDC File [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/constrs_1/new/consts.xdc]
-WARNING: [Vivado 12-584] No ports matched 'copy'. [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/constrs_1/new/consts.xdc:28]
-WARNING: [Vivado 12-584] No ports matched 'copy'. [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/constrs_1/new/consts.xdc:29]
-WARNING: [Vivado 12-584] No ports matched 'copy_done'. [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/constrs_1/new/consts.xdc:31]
-WARNING: [Vivado 12-584] No ports matched 'copy_done'. [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/constrs_1/new/consts.xdc:32]
-WARNING: [Vivado 12-584] No ports matched 'glob_rest'. [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/constrs_1/new/consts.xdc:36]
-WARNING: [Vivado 12-584] No ports matched 'glob_rest'. [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/constrs_1/new/consts.xdc:37]
-WARNING: [Vivado 12-584] No ports matched 'transmit2'. [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/constrs_1/new/consts.xdc:46]
-WARNING: [Vivado 12-584] No ports matched 'transmit2'. [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/constrs_1/new/consts.xdc:47]
-Finished Parsing XDC File [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/constrs_1/new/consts.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/constrs_1/new/consts.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/topmodule_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/constrs_1/new/consts.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/topmodule_propImpl.xdc].
+Parsing XDC File [d:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.gen/sources_1/ip/blk_mem_gen_0_3/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'original'
+Finished Parsing XDC File [d:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.gen/sources_1/ip/blk_mem_gen_0_3/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'original'
+Parsing XDC File [d:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'processed'
+Finished Parsing XDC File [d:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'processed'
+Parsing XDC File [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/constrs_1/new/consts.xdc]
+Finished Parsing XDC File [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/constrs_1/new/consts.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.srcs/constrs_1/new/consts.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/topmodule_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/topmodule_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.runs/synth_1/dont_touch.xdc]
+Parsing XDC File [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1448.551 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1226.375 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.074 . Memory (MB): peak = 1448.551 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.077 . Memory (MB): peak = 1226.375 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1448.551 ; gain = 473.238
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1226.375 ; gain = 718.012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1448.551 ; gain = 473.238
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1226.375 ; gain = 718.012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for processed. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for original. (constraint file  auto generated constraint, line ).
+Applied set_property KEEP_HIERARCHY = SOFT for original. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for processed. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1448.551 ; gain = 473.238
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1226.375 ; gain = 718.012
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'matrix_mult_8x8_dsp'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'matrix_mult_8x8_dsp__parameterized0'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'do_dct'
-INFO: [Synth 8-4471] merging register 'proc1_wea_reg' into 'proc1_ena_reg' [C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.srcs/sources_1/new/dct_top.v:81]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                    IDLE |                             0001 |                               00
-                    LOAD |                             0010 |                               01
-                 COMPUTE |                             0100 |                               10
-                 DONE_ST |                             1000 |                               11
+                    IDLE |                              000 |                              000
+                    LOAD |                              001 |                              001
+                 COMPUTE |                              010 |                              010
+                 DONE_ST |                              011 |                              011
+                   READY |                              100 |                              100
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'matrix_mult_8x8_dsp'
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'matrix_mult_8x8_dsp'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                    IDLE |                             0001 |                               00
-                    LOAD |                             0010 |                               01
-                 COMPUTE |                             0100 |                               10
-                 DONE_ST |                             1000 |                               11
+                    IDLE |                              000 |                              000
+                    LOAD |                              001 |                              001
+                 COMPUTE |                              010 |                              010
+                 DONE_ST |                              011 |                              011
+                   READY |                              100 |                              100
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'matrix_mult_8x8_dsp__parameterized0'
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'matrix_mult_8x8_dsp__parameterized0'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -203,184 +328,56 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'do_dct'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1448.551 ; gain = 473.238
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1226.375 ; gain = 718.012
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     16 Bit       Adders := 1     
-	   2 Input     14 Bit       Adders := 1     
-	   2 Input      9 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 1     
-	   2 Input      4 Bit       Adders := 4     
-	   2 Input      2 Bit       Adders := 1     
+	   2 Input   14 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 2     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 4     
+	   2 Input    2 Bit       Adders := 1     
 +---Registers : 
-	             1024 Bit    Registers := 5     
+	             1024 Bit    Registers := 7     
 	               32 Bit    Registers := 128   
-	               16 Bit    Registers := 321   
-	               15 Bit    Registers := 2     
+	               16 Bit    Registers := 320   
+	               15 Bit    Registers := 1     
 	               14 Bit    Registers := 3     
-	               10 Bit    Registers := 2     
-	                8 Bit    Registers := 11    
-	                6 Bit    Registers := 1     
-	                4 Bit    Registers := 4     
-	                3 Bit    Registers := 1     
-	                2 Bit    Registers := 3     
-	                1 Bit    Registers := 30    
+	               10 Bit    Registers := 3     
+	                8 Bit    Registers := 12    
+	                6 Bit    Registers := 3     
+	                4 Bit    Registers := 5     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 32    
 +---Muxes : 
-	   2 Input   1024 Bit        Muxes := 1     
-	   7 Input   1024 Bit        Muxes := 1     
-	   2 Input     16 Bit        Muxes := 128   
-	   7 Input     16 Bit        Muxes := 1     
-	   2 Input     15 Bit        Muxes := 1     
-	   2 Input     14 Bit        Muxes := 4     
-	   2 Input     10 Bit        Muxes := 1     
-	   7 Input      8 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 3     
-	   2 Input      6 Bit        Muxes := 1     
-	   7 Input      6 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 2     
-	   4 Input      4 Bit        Muxes := 2     
-	   8 Input      3 Bit        Muxes := 1     
-	   4 Input      2 Bit        Muxes := 3     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 42    
-	   4 Input      1 Bit        Muxes := 7     
-	   5 Input      1 Bit        Muxes := 2     
-	   7 Input      1 Bit        Muxes := 10    
-	   8 Input      1 Bit        Muxes := 1     
+	   4 Input 1024 Bit        Muxes := 1     
+	   2 Input 1024 Bit        Muxes := 2     
+	  11 Input 1024 Bit        Muxes := 1     
+	   2 Input   15 Bit        Muxes := 1     
+	   2 Input   14 Bit        Muxes := 4     
+	   2 Input   10 Bit        Muxes := 1     
+	  10 Input    8 Bit        Muxes := 1     
+	  11 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 3     
+	   2 Input    7 Bit        Muxes := 1     
+	  11 Input    6 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 3     
+	   5 Input    4 Bit        Muxes := 2     
+	   5 Input    3 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 44    
+	   4 Input    1 Bit        Muxes := 6     
+	   5 Input    1 Bit        Muxes := 12    
+	  11 Input    1 Bit        Muxes := 11    
+	  10 Input    1 Bit        Muxes := 5     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start RTL Hierarchical Component Statistics 
----------------------------------------------------------------------------------
-Hierarchical RTL Component report 
-Module topmodule 
-Detailed RTL Component Info : 
-+---Registers : 
-	               15 Bit    Registers := 1     
-	               14 Bit    Registers := 1     
-	                8 Bit    Registers := 6     
-	                1 Bit    Registers := 5     
-+---Muxes : 
-	   2 Input     15 Bit        Muxes := 1     
-	   2 Input     14 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 8     
-Module imrx 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     14 Bit       Adders := 1     
-	   2 Input      4 Bit       Adders := 1     
-	   2 Input      2 Bit       Adders := 1     
-+---Registers : 
-	               14 Bit    Registers := 1     
-	               10 Bit    Registers := 1     
-	                8 Bit    Registers := 1     
-	                4 Bit    Registers := 1     
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 9     
-+---Muxes : 
-	   2 Input     14 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 20    
-	   4 Input      1 Bit        Muxes := 1     
-Module matrix_mult_8x8_dsp 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      4 Bit       Adders := 1     
-+---Registers : 
-	             1024 Bit    Registers := 1     
-	               32 Bit    Registers := 64    
-	               16 Bit    Registers := 128   
-	                4 Bit    Registers := 1     
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      4 Bit        Muxes := 1     
-	   4 Input      4 Bit        Muxes := 1     
-	   4 Input      2 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 1     
-Module matrix_mult_8x8_dsp__parameterized0 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      4 Bit       Adders := 1     
-+---Registers : 
-	             1024 Bit    Registers := 1     
-	               32 Bit    Registers := 64    
-	               16 Bit    Registers := 128   
-	                4 Bit    Registers := 1     
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      4 Bit        Muxes := 1     
-	   4 Input      4 Bit        Muxes := 1     
-	   4 Input      2 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 1     
-Module do_dct 
-Detailed RTL Component Info : 
-+---Registers : 
-	             1024 Bit    Registers := 2     
-	               16 Bit    Registers := 64    
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     16 Bit        Muxes := 128   
-	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 4     
-	   2 Input      1 Bit        Muxes := 2     
-Module dct_top 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     16 Bit       Adders := 1     
-	   2 Input      9 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 1     
-+---Registers : 
-	             1024 Bit    Registers := 1     
-	               16 Bit    Registers := 1     
-	               15 Bit    Registers := 1     
-	               14 Bit    Registers := 1     
-	                8 Bit    Registers := 4     
-	                6 Bit    Registers := 1     
-	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-+---Muxes : 
-	   2 Input   1024 Bit        Muxes := 1     
-	   7 Input   1024 Bit        Muxes := 1     
-	   7 Input     16 Bit        Muxes := 1     
-	   7 Input      8 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 1     
-	   2 Input      6 Bit        Muxes := 1     
-	   7 Input      6 Bit        Muxes := 1     
-	   8 Input      3 Bit        Muxes := 1     
-	   7 Input      1 Bit        Muxes := 10    
-	   2 Input      1 Bit        Muxes := 3     
-	   8 Input      1 Bit        Muxes := 1     
-Module imtx 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      4 Bit       Adders := 1     
-+---Registers : 
-	               10 Bit    Registers := 1     
-	                4 Bit    Registers := 1     
-	                1 Bit    Registers := 7     
-+---Muxes : 
-	   2 Input     10 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 9     
----------------------------------------------------------------------------------
-Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Part Resource Summary
@@ -394,7 +391,7 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 DSP Report: Generating DSP p_1_out, operation Mode is: C+A*B.
 DSP Report: operator p_1_out is absorbed into DSP p_1_out.
 DSP Report: operator p_0_out is absorbed into DSP p_1_out.
@@ -779,225 +776,510 @@ DSP Report: operator p_0_out is absorbed into DSP p_1_out.
 DSP Report: Generating DSP p_1_out, operation Mode is: C+A*B.
 DSP Report: operator p_1_out is absorbed into DSP p_1_out.
 DSP Report: operator p_0_out is absorbed into DSP p_1_out.
-WARNING: [Synth 8-3331] design dct_top has unconnected port proc1_dout[7]
-WARNING: [Synth 8-3331] design dct_top has unconnected port proc1_dout[6]
-WARNING: [Synth 8-3331] design dct_top has unconnected port proc1_dout[5]
-WARNING: [Synth 8-3331] design dct_top has unconnected port proc1_dout[4]
-WARNING: [Synth 8-3331] design dct_top has unconnected port proc1_dout[3]
-WARNING: [Synth 8-3331] design dct_top has unconnected port proc1_dout[2]
-WARNING: [Synth 8-3331] design dct_top has unconnected port proc1_dout[1]
-WARNING: [Synth 8-3331] design dct_top has unconnected port proc1_dout[0]
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[1008] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[992] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[976] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[960] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[944] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[928] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[912] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[896] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[880] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[864] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[848] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[832] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[816] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[800] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[784] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[768] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[752] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[736] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[720] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[704] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[688] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[672] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[656] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[640] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[624] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[608] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[592] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[576] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[560] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[544] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[528] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[512] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[496] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[480] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[464] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[448] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[432] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[416] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[400] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[384] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[368] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[352] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[336] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[320] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[304] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[288] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[272] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[256] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[240] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[224] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[208] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[192] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[176] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[160] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[144] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[128] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[112] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[96] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[80] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[64] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[48] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[32] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[1009] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[993] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[977] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[961] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[945] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[929] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[913] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[897] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[881] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[865] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[849] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[833] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[817] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[801] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[785] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[769] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[753] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[737] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[721] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[705] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[689] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[673] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[657] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[641] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[625] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[609] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[593] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[577] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[561] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[545] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[529] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[513] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[497] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[481] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[465] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dct_inst/\dct_block_in_reg[449] )
-INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[1020]' (FDCE) to 'dct_inst/dct_block_in_reg[1021]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[1004]' (FDCE) to 'dct_inst/dct_block_in_reg[1005]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[988]' (FDCE) to 'dct_inst/dct_block_in_reg[989]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[972]' (FDCE) to 'dct_inst/dct_block_in_reg[973]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[956]' (FDCE) to 'dct_inst/dct_block_in_reg[957]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[940]' (FDCE) to 'dct_inst/dct_block_in_reg[941]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[924]' (FDCE) to 'dct_inst/dct_block_in_reg[925]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[908]' (FDCE) to 'dct_inst/dct_block_in_reg[909]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[892]' (FDCE) to 'dct_inst/dct_block_in_reg[893]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[876]' (FDCE) to 'dct_inst/dct_block_in_reg[877]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[860]' (FDCE) to 'dct_inst/dct_block_in_reg[861]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[844]' (FDCE) to 'dct_inst/dct_block_in_reg[845]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[828]' (FDCE) to 'dct_inst/dct_block_in_reg[829]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[812]' (FDCE) to 'dct_inst/dct_block_in_reg[813]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[796]' (FDCE) to 'dct_inst/dct_block_in_reg[797]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[780]' (FDCE) to 'dct_inst/dct_block_in_reg[781]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[764]' (FDCE) to 'dct_inst/dct_block_in_reg[765]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[748]' (FDCE) to 'dct_inst/dct_block_in_reg[749]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[732]' (FDCE) to 'dct_inst/dct_block_in_reg[733]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[716]' (FDCE) to 'dct_inst/dct_block_in_reg[717]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[700]' (FDCE) to 'dct_inst/dct_block_in_reg[701]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[684]' (FDCE) to 'dct_inst/dct_block_in_reg[685]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[668]' (FDCE) to 'dct_inst/dct_block_in_reg[669]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[652]' (FDCE) to 'dct_inst/dct_block_in_reg[653]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[636]' (FDCE) to 'dct_inst/dct_block_in_reg[637]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[620]' (FDCE) to 'dct_inst/dct_block_in_reg[621]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[604]' (FDCE) to 'dct_inst/dct_block_in_reg[605]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[588]' (FDCE) to 'dct_inst/dct_block_in_reg[589]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[572]' (FDCE) to 'dct_inst/dct_block_in_reg[573]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[556]' (FDCE) to 'dct_inst/dct_block_in_reg[557]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[540]' (FDCE) to 'dct_inst/dct_block_in_reg[541]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[524]' (FDCE) to 'dct_inst/dct_block_in_reg[525]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[508]' (FDCE) to 'dct_inst/dct_block_in_reg[509]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[492]' (FDCE) to 'dct_inst/dct_block_in_reg[493]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[476]' (FDCE) to 'dct_inst/dct_block_in_reg[477]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[460]' (FDCE) to 'dct_inst/dct_block_in_reg[461]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[444]' (FDCE) to 'dct_inst/dct_block_in_reg[445]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[428]' (FDCE) to 'dct_inst/dct_block_in_reg[429]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[412]' (FDCE) to 'dct_inst/dct_block_in_reg[413]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[396]' (FDCE) to 'dct_inst/dct_block_in_reg[397]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[380]' (FDCE) to 'dct_inst/dct_block_in_reg[381]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[364]' (FDCE) to 'dct_inst/dct_block_in_reg[365]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[348]' (FDCE) to 'dct_inst/dct_block_in_reg[349]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[332]' (FDCE) to 'dct_inst/dct_block_in_reg[333]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[316]' (FDCE) to 'dct_inst/dct_block_in_reg[317]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[300]' (FDCE) to 'dct_inst/dct_block_in_reg[301]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[284]' (FDCE) to 'dct_inst/dct_block_in_reg[285]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[268]' (FDCE) to 'dct_inst/dct_block_in_reg[269]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[252]' (FDCE) to 'dct_inst/dct_block_in_reg[253]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[236]' (FDCE) to 'dct_inst/dct_block_in_reg[237]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[220]' (FDCE) to 'dct_inst/dct_block_in_reg[221]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[204]' (FDCE) to 'dct_inst/dct_block_in_reg[205]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[188]' (FDCE) to 'dct_inst/dct_block_in_reg[189]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[172]' (FDCE) to 'dct_inst/dct_block_in_reg[173]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[156]' (FDCE) to 'dct_inst/dct_block_in_reg[157]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[140]' (FDCE) to 'dct_inst/dct_block_in_reg[141]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[124]' (FDCE) to 'dct_inst/dct_block_in_reg[125]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[108]' (FDCE) to 'dct_inst/dct_block_in_reg[109]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[92]' (FDCE) to 'dct_inst/dct_block_in_reg[93]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[76]' (FDCE) to 'dct_inst/dct_block_in_reg[77]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[60]' (FDCE) to 'dct_inst/dct_block_in_reg[61]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[44]' (FDCE) to 'dct_inst/dct_block_in_reg[45]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[28]' (FDCE) to 'dct_inst/dct_block_in_reg[29]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[12]' (FDCE) to 'dct_inst/dct_block_in_reg[13]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[1021]' (FDCE) to 'dct_inst/dct_block_in_reg[1022]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[1005]' (FDCE) to 'dct_inst/dct_block_in_reg[1006]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[989]' (FDCE) to 'dct_inst/dct_block_in_reg[990]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[973]' (FDCE) to 'dct_inst/dct_block_in_reg[974]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[957]' (FDCE) to 'dct_inst/dct_block_in_reg[958]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[941]' (FDCE) to 'dct_inst/dct_block_in_reg[942]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[925]' (FDCE) to 'dct_inst/dct_block_in_reg[926]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[909]' (FDCE) to 'dct_inst/dct_block_in_reg[910]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[893]' (FDCE) to 'dct_inst/dct_block_in_reg[894]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[877]' (FDCE) to 'dct_inst/dct_block_in_reg[878]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[861]' (FDCE) to 'dct_inst/dct_block_in_reg[862]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[845]' (FDCE) to 'dct_inst/dct_block_in_reg[846]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[829]' (FDCE) to 'dct_inst/dct_block_in_reg[830]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[813]' (FDCE) to 'dct_inst/dct_block_in_reg[814]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[797]' (FDCE) to 'dct_inst/dct_block_in_reg[798]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[781]' (FDCE) to 'dct_inst/dct_block_in_reg[782]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[765]' (FDCE) to 'dct_inst/dct_block_in_reg[766]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[749]' (FDCE) to 'dct_inst/dct_block_in_reg[750]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[733]' (FDCE) to 'dct_inst/dct_block_in_reg[734]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[717]' (FDCE) to 'dct_inst/dct_block_in_reg[718]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[701]' (FDCE) to 'dct_inst/dct_block_in_reg[702]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[685]' (FDCE) to 'dct_inst/dct_block_in_reg[686]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[669]' (FDCE) to 'dct_inst/dct_block_in_reg[670]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[653]' (FDCE) to 'dct_inst/dct_block_in_reg[654]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[637]' (FDCE) to 'dct_inst/dct_block_in_reg[638]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[621]' (FDCE) to 'dct_inst/dct_block_in_reg[622]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[605]' (FDCE) to 'dct_inst/dct_block_in_reg[606]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[589]' (FDCE) to 'dct_inst/dct_block_in_reg[590]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[573]' (FDCE) to 'dct_inst/dct_block_in_reg[574]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[557]' (FDCE) to 'dct_inst/dct_block_in_reg[558]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[541]' (FDCE) to 'dct_inst/dct_block_in_reg[542]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[525]' (FDCE) to 'dct_inst/dct_block_in_reg[526]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[509]' (FDCE) to 'dct_inst/dct_block_in_reg[510]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[493]' (FDCE) to 'dct_inst/dct_block_in_reg[494]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[477]' (FDCE) to 'dct_inst/dct_block_in_reg[478]'
-INFO: [Synth 8-3886] merging instance 'dct_inst/dct_block_in_reg[461]' (FDCE) to 'dct_inst/dct_block_in_reg[462]'
-INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-7129] Port clk in module matrix_mult_8x8_dsp__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module matrix_mult_8x8_dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module dct_top_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port proc1_dout[7] in module dct_top_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port proc1_dout[6] in module dct_top_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port proc1_dout[5] in module dct_top_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port proc1_dout[4] in module dct_top_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port proc1_dout[3] in module dct_top_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port proc1_dout[2] in module dct_top_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port proc1_dout[1] in module dct_top_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port proc1_dout[0] in module dct_top_2 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 1448.551 ; gain = 473.238
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1238.164 ; gain = 729.801
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-3323] Resources of type DSP have been overutilized. Used = 128, Available = 90. Use report_utilization command for details.
+ Sort Area is  p_1_out_0 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_10 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_11 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_12 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_13 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_14 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_15 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_16 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_17 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_18 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_19 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_1a : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_1b : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_1c : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_1d : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_1e : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_1f : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_2 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_20 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_21 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_22 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_23 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_24 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_25 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_26 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_27 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_28 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_29 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_2a : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_2b : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_2c : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_2d : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_2e : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_2f : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_3 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_30 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_31 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_32 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_33 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_34 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_35 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_36 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_37 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_38 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_39 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_3a : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_3b : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_3c : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_3d : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_3e : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_3f : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_4 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_40 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_41 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_42 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_43 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_44 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_45 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_46 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_47 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_48 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_49 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_4a : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_4b : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_4c : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_4d : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_4e : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_4f : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_5 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_50 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_51 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_52 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_53 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_54 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_55 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_56 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_57 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_58 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_59 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_5a : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_5b : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_5c : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_5d : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_5e : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_5f : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_6 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_60 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_61 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_62 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_63 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_64 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_65 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_66 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_67 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_68 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_69 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_6a : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_6b : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_6c : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_6d : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_6e : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_6f : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_7 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_70 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_71 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_72 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_73 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_74 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_75 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_76 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_77 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_78 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_79 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_7a : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_7b : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_7c : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_7d : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_7e : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_7f : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_8 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_80 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_9 : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_a : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_b : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_c : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_d : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_e : 0 0 : 2032 2032 : Used 1 time 0
+ Sort Area is  p_1_out_f : 0 0 : 2032 2032 : Used 1 time 0
+ DSP resource Status: p_1_out_0 0 2032 2032: Used 1 time : Accepted (1 < 90) uniquify 0 
+ DSP resource Status: p_1_out_2 0 2032 2032: Used 1 time : Accepted (18 < 90) uniquify 0 
+ DSP resource Status: p_1_out_3 0 2032 2032: Used 1 time : Accepted (35 < 90) uniquify 0 
+ DSP resource Status: p_1_out_4 0 2032 2032: Used 1 time : Accepted (52 < 90) uniquify 0 
+ DSP resource Status: p_1_out_5 0 2032 2032: Used 1 time : Accepted (69 < 90) uniquify 0 
+ DSP resource Status: p_1_out_6 0 2032 2032: Used 1 time : Accepted (86 < 90) uniquify 0 
+ DSP resource Status: p_1_out_7 0 2032 2032: Used 1 time : Rejected (103 > 90) uniquify 0 
+ DSP resource Status: p_1_out_8 0 2032 2032: Used 1 time : Rejected (120 > 90) uniquify 0 
+ DSP resource Status: p_1_out_9 0 2032 2032: Used 1 time : Rejected (122 > 90) uniquify 0 
+ DSP resource Status: p_1_out_a 0 2032 2032: Used 1 time : Rejected (123 > 90) uniquify 0 
+ DSP resource Status: p_1_out_b 0 2032 2032: Used 1 time : Rejected (124 > 90) uniquify 0 
+ DSP resource Status: p_1_out_c 0 2032 2032: Used 1 time : Rejected (125 > 90) uniquify 0 
+ DSP resource Status: p_1_out_d 0 2032 2032: Used 1 time : Rejected (126 > 90) uniquify 0 
+ DSP resource Status: p_1_out_e 0 2032 2032: Used 1 time : Rejected (127 > 90) uniquify 0 
+ DSP resource Status: p_1_out_f 0 2032 2032: Used 1 time : Rejected (128 > 90) uniquify 0 
+ DSP resource Status: p_1_out_10 0 2032 2032: Used 1 time : Accepted (2 < 90) uniquify 0 
+ DSP resource Status: p_1_out_11 0 2032 2032: Used 1 time : Accepted (3 < 90) uniquify 0 
+ DSP resource Status: p_1_out_12 0 2032 2032: Used 1 time : Accepted (4 < 90) uniquify 0 
+ DSP resource Status: p_1_out_13 0 2032 2032: Used 1 time : Accepted (5 < 90) uniquify 0 
+ DSP resource Status: p_1_out_14 0 2032 2032: Used 1 time : Accepted (6 < 90) uniquify 0 
+ DSP resource Status: p_1_out_15 0 2032 2032: Used 1 time : Accepted (7 < 90) uniquify 0 
+ DSP resource Status: p_1_out_16 0 2032 2032: Used 1 time : Accepted (8 < 90) uniquify 0 
+ DSP resource Status: p_1_out_17 0 2032 2032: Used 1 time : Accepted (9 < 90) uniquify 0 
+ DSP resource Status: p_1_out_18 0 2032 2032: Used 1 time : Accepted (10 < 90) uniquify 0 
+ DSP resource Status: p_1_out_19 0 2032 2032: Used 1 time : Accepted (11 < 90) uniquify 0 
+ DSP resource Status: p_1_out_1a 0 2032 2032: Used 1 time : Accepted (12 < 90) uniquify 0 
+ DSP resource Status: p_1_out_1b 0 2032 2032: Used 1 time : Accepted (13 < 90) uniquify 0 
+ DSP resource Status: p_1_out_1c 0 2032 2032: Used 1 time : Accepted (14 < 90) uniquify 0 
+ DSP resource Status: p_1_out_1d 0 2032 2032: Used 1 time : Accepted (15 < 90) uniquify 0 
+ DSP resource Status: p_1_out_1e 0 2032 2032: Used 1 time : Accepted (16 < 90) uniquify 0 
+ DSP resource Status: p_1_out_1f 0 2032 2032: Used 1 time : Accepted (17 < 90) uniquify 0 
+ DSP resource Status: p_1_out_20 0 2032 2032: Used 1 time : Accepted (19 < 90) uniquify 0 
+ DSP resource Status: p_1_out_21 0 2032 2032: Used 1 time : Accepted (20 < 90) uniquify 0 
+ DSP resource Status: p_1_out_22 0 2032 2032: Used 1 time : Accepted (21 < 90) uniquify 0 
+ DSP resource Status: p_1_out_23 0 2032 2032: Used 1 time : Accepted (22 < 90) uniquify 0 
+ DSP resource Status: p_1_out_24 0 2032 2032: Used 1 time : Accepted (23 < 90) uniquify 0 
+ DSP resource Status: p_1_out_25 0 2032 2032: Used 1 time : Accepted (24 < 90) uniquify 0 
+ DSP resource Status: p_1_out_26 0 2032 2032: Used 1 time : Accepted (25 < 90) uniquify 0 
+ DSP resource Status: p_1_out_27 0 2032 2032: Used 1 time : Accepted (26 < 90) uniquify 0 
+ DSP resource Status: p_1_out_28 0 2032 2032: Used 1 time : Accepted (27 < 90) uniquify 0 
+ DSP resource Status: p_1_out_29 0 2032 2032: Used 1 time : Accepted (28 < 90) uniquify 0 
+ DSP resource Status: p_1_out_2a 0 2032 2032: Used 1 time : Accepted (29 < 90) uniquify 0 
+ DSP resource Status: p_1_out_2b 0 2032 2032: Used 1 time : Accepted (30 < 90) uniquify 0 
+ DSP resource Status: p_1_out_2c 0 2032 2032: Used 1 time : Accepted (31 < 90) uniquify 0 
+ DSP resource Status: p_1_out_2d 0 2032 2032: Used 1 time : Accepted (32 < 90) uniquify 0 
+ DSP resource Status: p_1_out_2e 0 2032 2032: Used 1 time : Accepted (33 < 90) uniquify 0 
+ DSP resource Status: p_1_out_2f 0 2032 2032: Used 1 time : Accepted (34 < 90) uniquify 0 
+ DSP resource Status: p_1_out_30 0 2032 2032: Used 1 time : Accepted (36 < 90) uniquify 0 
+ DSP resource Status: p_1_out_31 0 2032 2032: Used 1 time : Accepted (37 < 90) uniquify 0 
+ DSP resource Status: p_1_out_32 0 2032 2032: Used 1 time : Accepted (38 < 90) uniquify 0 
+ DSP resource Status: p_1_out_33 0 2032 2032: Used 1 time : Accepted (39 < 90) uniquify 0 
+ DSP resource Status: p_1_out_34 0 2032 2032: Used 1 time : Accepted (40 < 90) uniquify 0 
+ DSP resource Status: p_1_out_35 0 2032 2032: Used 1 time : Accepted (41 < 90) uniquify 0 
+ DSP resource Status: p_1_out_36 0 2032 2032: Used 1 time : Accepted (42 < 90) uniquify 0 
+ DSP resource Status: p_1_out_37 0 2032 2032: Used 1 time : Accepted (43 < 90) uniquify 0 
+ DSP resource Status: p_1_out_38 0 2032 2032: Used 1 time : Accepted (44 < 90) uniquify 0 
+ DSP resource Status: p_1_out_39 0 2032 2032: Used 1 time : Accepted (45 < 90) uniquify 0 
+ DSP resource Status: p_1_out_3a 0 2032 2032: Used 1 time : Accepted (46 < 90) uniquify 0 
+ DSP resource Status: p_1_out_3b 0 2032 2032: Used 1 time : Accepted (47 < 90) uniquify 0 
+ DSP resource Status: p_1_out_3c 0 2032 2032: Used 1 time : Accepted (48 < 90) uniquify 0 
+ DSP resource Status: p_1_out_3d 0 2032 2032: Used 1 time : Accepted (49 < 90) uniquify 0 
+ DSP resource Status: p_1_out_3e 0 2032 2032: Used 1 time : Accepted (50 < 90) uniquify 0 
+ DSP resource Status: p_1_out_3f 0 2032 2032: Used 1 time : Accepted (51 < 90) uniquify 0 
+ DSP resource Status: p_1_out_40 0 2032 2032: Used 1 time : Accepted (53 < 90) uniquify 0 
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+ DSP resource Status: p_1_out_41 0 2032 2032: Used 1 time : Accepted (54 < 90) uniquify 0 
+ DSP resource Status: p_1_out_42 0 2032 2032: Used 1 time : Accepted (55 < 90) uniquify 0 
+ DSP resource Status: p_1_out_43 0 2032 2032: Used 1 time : Accepted (56 < 90) uniquify 0 
+ DSP resource Status: p_1_out_44 0 2032 2032: Used 1 time : Accepted (57 < 90) uniquify 0 
+ DSP resource Status: p_1_out_45 0 2032 2032: Used 1 time : Accepted (58 < 90) uniquify 0 
+ DSP resource Status: p_1_out_46 0 2032 2032: Used 1 time : Accepted (59 < 90) uniquify 0 
+ DSP resource Status: p_1_out_47 0 2032 2032: Used 1 time : Accepted (60 < 90) uniquify 0 
+ DSP resource Status: p_1_out_48 0 2032 2032: Used 1 time : Accepted (61 < 90) uniquify 0 
+ DSP resource Status: p_1_out_49 0 2032 2032: Used 1 time : Accepted (62 < 90) uniquify 0 
+ DSP resource Status: p_1_out_4a 0 2032 2032: Used 1 time : Accepted (63 < 90) uniquify 0 
+ DSP resource Status: p_1_out_4b 0 2032 2032: Used 1 time : Accepted (64 < 90) uniquify 0 
+ DSP resource Status: p_1_out_4c 0 2032 2032: Used 1 time : Accepted (65 < 90) uniquify 0 
+ DSP resource Status: p_1_out_4d 0 2032 2032: Used 1 time : Accepted (66 < 90) uniquify 0 
+ DSP resource Status: p_1_out_4e 0 2032 2032: Used 1 time : Accepted (67 < 90) uniquify 0 
+ DSP resource Status: p_1_out_4f 0 2032 2032: Used 1 time : Accepted (68 < 90) uniquify 0 
+ DSP resource Status: p_1_out_50 0 2032 2032: Used 1 time : Accepted (70 < 90) uniquify 0 
+ DSP resource Status: p_1_out_51 0 2032 2032: Used 1 time : Accepted (71 < 90) uniquify 0 
+ DSP resource Status: p_1_out_52 0 2032 2032: Used 1 time : Accepted (72 < 90) uniquify 0 
+ DSP resource Status: p_1_out_53 0 2032 2032: Used 1 time : Accepted (73 < 90) uniquify 0 
+ DSP resource Status: p_1_out_54 0 2032 2032: Used 1 time : Accepted (74 < 90) uniquify 0 
+ DSP resource Status: p_1_out_55 0 2032 2032: Used 1 time : Accepted (75 < 90) uniquify 0 
+ DSP resource Status: p_1_out_56 0 2032 2032: Used 1 time : Accepted (76 < 90) uniquify 0 
+ DSP resource Status: p_1_out_57 0 2032 2032: Used 1 time : Accepted (77 < 90) uniquify 0 
+ DSP resource Status: p_1_out_58 0 2032 2032: Used 1 time : Accepted (78 < 90) uniquify 0 
+ DSP resource Status: p_1_out_59 0 2032 2032: Used 1 time : Accepted (79 < 90) uniquify 0 
+ DSP resource Status: p_1_out_5a 0 2032 2032: Used 1 time : Accepted (80 < 90) uniquify 0 
+ DSP resource Status: p_1_out_5b 0 2032 2032: Used 1 time : Accepted (81 < 90) uniquify 0 
+ DSP resource Status: p_1_out_5c 0 2032 2032: Used 1 time : Accepted (82 < 90) uniquify 0 
+ DSP resource Status: p_1_out_5d 0 2032 2032: Used 1 time : Accepted (83 < 90) uniquify 0 
+ DSP resource Status: p_1_out_5e 0 2032 2032: Used 1 time : Accepted (84 < 90) uniquify 0 
+ DSP resource Status: p_1_out_5f 0 2032 2032: Used 1 time : Accepted (85 < 90) uniquify 0 
+ DSP resource Status: p_1_out_60 0 2032 2032: Used 1 time : Accepted (87 < 90) uniquify 0 
+ DSP resource Status: p_1_out_61 0 2032 2032: Used 1 time : Accepted (88 < 90) uniquify 0 
+ DSP resource Status: p_1_out_62 0 2032 2032: Used 1 time : Accepted (89 < 90) uniquify 0 
+ DSP resource Status: p_1_out_63 0 2032 2032: Used 1 time : Accepted (90 < 90) uniquify 0 
+ DSP resource Status: p_1_out_64 0 2032 2032: Used 1 time : Rejected (91 > 90) uniquify 0 
+ DSP resource Status: p_1_out_65 0 2032 2032: Used 1 time : Rejected (92 > 90) uniquify 0 
+ DSP resource Status: p_1_out_66 0 2032 2032: Used 1 time : Rejected (93 > 90) uniquify 0 
+ DSP resource Status: p_1_out_67 0 2032 2032: Used 1 time : Rejected (94 > 90) uniquify 0 
+ DSP resource Status: p_1_out_68 0 2032 2032: Used 1 time : Rejected (95 > 90) uniquify 0 
+ DSP resource Status: p_1_out_69 0 2032 2032: Used 1 time : Rejected (96 > 90) uniquify 0 
+ DSP resource Status: p_1_out_6a 0 2032 2032: Used 1 time : Rejected (97 > 90) uniquify 0 
+ DSP resource Status: p_1_out_6b 0 2032 2032: Used 1 time : Rejected (98 > 90) uniquify 0 
+ DSP resource Status: p_1_out_6c 0 2032 2032: Used 1 time : Rejected (99 > 90) uniquify 0 
+ DSP resource Status: p_1_out_6d 0 2032 2032: Used 1 time : Rejected (100 > 90) uniquify 0 
+ DSP resource Status: p_1_out_6e 0 2032 2032: Used 1 time : Rejected (101 > 90) uniquify 0 
+ DSP resource Status: p_1_out_6f 0 2032 2032: Used 1 time : Rejected (102 > 90) uniquify 0 
+ DSP resource Status: p_1_out_70 0 2032 2032: Used 1 time : Rejected (104 > 90) uniquify 0 
+ DSP resource Status: p_1_out_71 0 2032 2032: Used 1 time : Rejected (105 > 90) uniquify 0 
+ DSP resource Status: p_1_out_72 0 2032 2032: Used 1 time : Rejected (106 > 90) uniquify 0 
+ DSP resource Status: p_1_out_73 0 2032 2032: Used 1 time : Rejected (107 > 90) uniquify 0 
+ DSP resource Status: p_1_out_74 0 2032 2032: Used 1 time : Rejected (108 > 90) uniquify 0 
+ DSP resource Status: p_1_out_75 0 2032 2032: Used 1 time : Rejected (109 > 90) uniquify 0 
+ DSP resource Status: p_1_out_76 0 2032 2032: Used 1 time : Rejected (110 > 90) uniquify 0 
+ DSP resource Status: p_1_out_77 0 2032 2032: Used 1 time : Rejected (111 > 90) uniquify 0 
+ DSP resource Status: p_1_out_78 0 2032 2032: Used 1 time : Rejected (112 > 90) uniquify 0 
+ DSP resource Status: p_1_out_79 0 2032 2032: Used 1 time : Rejected (113 > 90) uniquify 0 
+ DSP resource Status: p_1_out_7a 0 2032 2032: Used 1 time : Rejected (114 > 90) uniquify 0 
+ DSP resource Status: p_1_out_7b 0 2032 2032: Used 1 time : Rejected (115 > 90) uniquify 0 
+ DSP resource Status: p_1_out_7c 0 2032 2032: Used 1 time : Rejected (116 > 90) uniquify 0 
+ DSP resource Status: p_1_out_7d 0 2032 2032: Used 1 time : Rejected (117 > 90) uniquify 0 
+ DSP resource Status: p_1_out_7e 0 2032 2032: Used 1 time : Rejected (118 > 90) uniquify 0 
+ DSP resource Status: p_1_out_7f 0 2032 2032: Used 1 time : Rejected (119 > 90) uniquify 0 
+ DSP resource Status: p_1_out_80 0 2032 2032: Used 1 time : Rejected (121 > 90) uniquify 0 
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
 ---------------------------------------------------------------------------------
-Start ROM, RAM, DSP and Shift Register Reporting
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
-DSP: Preliminary Mapping	Report (see note below)
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
 +--------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |Module Name         | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
 +--------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
@@ -1133,44 +1415,26 @@ DSP: Preliminary Mapping	Report (see note below)
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
 ---------------------------------------------------------------------------------
-Finished ROM, RAM, DSP and Shift Register Reporting
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 1448.551 ; gain = 473.238
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 1379.867 ; gain = 871.504
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 1448.551 ; gain = 473.238
+Finished Timing Optimization : Time (s): cpu = 00:00:53 ; elapsed = 00:00:55 . Memory (MB): peak = 1407.836 ; gain = 899.473
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 1448.551 ; gain = 473.238
+Finished Technology Mapping : Time (s): cpu = 00:01:04 ; elapsed = 00:01:11 . Memory (MB): peak = 1748.699 ; gain = 1240.336
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -1187,54 +1451,124 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 1448.551 ; gain = 473.238
+Finished IO Insertion : Time (s): cpu = 00:01:11 ; elapsed = 00:01:17 . Memory (MB): peak = 1748.699 ; gain = 1240.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 1448.551 ; gain = 473.238
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:11 ; elapsed = 00:01:17 . Memory (MB): peak = 1748.699 ; gain = 1240.336
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 1448.551 ; gain = 473.238
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:12 ; elapsed = 00:01:19 . Memory (MB): peak = 1748.699 ; gain = 1240.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 1448.551 ; gain = 473.238
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:12 ; elapsed = 00:01:19 . Memory (MB): peak = 1748.699 ; gain = 1240.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 1448.551 ; gain = 473.238
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:12 ; elapsed = 00:01:19 . Memory (MB): peak = 1748.699 ; gain = 1240.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 1448.551 ; gain = 473.238
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:12 ; elapsed = 00:01:19 . Memory (MB): peak = 1748.699 ; gain = 1240.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++--------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name         | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
+|matrix_mult_8x8_dsp | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
++--------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
 
 Report BlackBoxes: 
 +------+--------------+----------+
@@ -1245,65 +1579,50 @@ Report BlackBoxes:
 +------+--------------+----------+
 
 Report Cell Usage: 
-+------+--------------+------+
-|      |Cell          |Count |
-+------+--------------+------+
-|1     |blk_mem_gen_0 |     1|
-|2     |blk_mem_gen_1 |     1|
-|3     |BUFG          |     1|
-|4     |CARRY4        |    20|
-|5     |LUT1          |    11|
-|6     |LUT2          |    70|
-|7     |LUT3          |    72|
-|8     |LUT4          |    38|
-|9     |LUT5          |    18|
-|10    |LUT6          |   222|
-|11    |MUXF7         |    64|
-|12    |MUXF8         |    16|
-|13    |FDCE          |  1130|
-|14    |FDPE          |     2|
-|15    |FDRE          |   176|
-|16    |FDSE          |     1|
-|17    |IBUF          |     5|
-|18    |OBUF          |    11|
-+------+--------------+------+
-
-Report Instance Areas: 
-+------+----------------+------------------------------------+------+
-|      |Instance        |Module                              |Cells |
-+------+----------------+------------------------------------+------+
-|1     |top             |                                    |  1873|
-|2     |  dct_inst      |dct_top                             |  1552|
-|3     |    dct_process |do_dct                              |    59|
-|4     |      mult1     |matrix_mult_8x8_dsp                 |    24|
-|5     |      mult2     |matrix_mult_8x8_dsp__parameterized0 |    23|
-|6     |  uut1          |imrx                                |   125|
-|7     |  uut2          |imtx                                |    92|
-+------+----------------+------------------------------------+------+
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |blk_mem_gen |     2|
+|3     |BUFG        |     2|
+|4     |CARRY4      |  1845|
+|5     |DSP48E1     |    76|
+|6     |LUT1        |    81|
+|7     |LUT2        |  4720|
+|8     |LUT3        |  1882|
+|9     |LUT4        |  1853|
+|10    |LUT5        |  1040|
+|11    |LUT6        |  4925|
+|12    |MUXF7       |   333|
+|13    |MUXF8       |    64|
+|14    |FDCE        |  1351|
+|15    |FDRE        |  8254|
+|16    |FDSE        |   228|
+|17    |IBUF        |     5|
+|18    |OBUF        |    11|
++------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 1448.551 ; gain = 473.238
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:13 ; elapsed = 00:01:19 . Memory (MB): peak = 1748.699 ; gain = 1240.336
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:27 . Memory (MB): peak = 1448.551 ; gain = 319.523
-Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 1448.551 ; gain = 473.238
+Synthesis finished with 0 errors, 0 critical warnings and 13 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:00 ; elapsed = 00:01:15 . Memory (MB): peak = 1748.699 ; gain = 1145.805
+Synthesis Optimization Complete : Time (s): cpu = 00:01:13 ; elapsed = 00:01:19 . Memory (MB): peak = 1748.699 ; gain = 1240.336
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1448.551 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 100 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.238 . Memory (MB): peak = 1748.699 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2318 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-WARNING: [Netlist 29-101] Netlist 'topmodule' is not ideal for floorplanning, since the cellview 'dct_top' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1448.551 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1748.699 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
+Synth Design complete | Checksum: fb7870f8
 INFO: [Common 17-83] Releasing license: Synthesis
-243 Infos, 51 Warnings, 0 Critical Warnings and 0 Errors encountered.
+46 Infos, 204 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:36 . Memory (MB): peak = 1448.551 ; gain = 732.695
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1448.551 ; gain = 0.000
-WARNING: [Constraints 18-5210] No constraints selected for write.
-Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.runs/synth_1/topmodule.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file topmodule_utilization_synth.rpt -pb topmodule_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Apr  7 21:42:08 2025...
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.statsThreshold
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 1748.699 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.runs/synth_1/topmodule.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file topmodule_utilization_synth.rpt -pb topmodule_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 16 14:05:02 2025...

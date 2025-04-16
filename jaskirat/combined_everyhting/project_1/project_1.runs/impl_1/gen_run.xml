@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1744042284">
-  <File Type="BITSTR-BMM" Name="topmodule_bd.bmm"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="topmodule_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="topmodule_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR" Name="topmodule_power_routed.rpt"/>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1744792403">
   <File Type="PA-TCL" Name="topmodule.tcl"/>
-  <File Type="OPT-TIMING" Name="topmodule_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="topmodule_opt.dcp"/>
-  <File Type="ROUTE-PWR-SUM" Name="topmodule_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="topmodule_reports.tcl"/>
+  <File Type="INIT-TIMING" Name="topmodule_timing_summary_init.rpt"/>
+  <File Type="OPT-DCP" Name="topmodule_opt.dcp"/>
   <File Type="OPT-DRC" Name="topmodule_drc_opted.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="topmodule_methodology_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="topmodule.hwdef"/>
+  <File Type="OPT-TIMING" Name="topmodule_timing_summary_opted.rpt"/>
+  <File Type="OPT-RQA-PB" Name="topmodule_rqa_opted.pb"/>
   <File Type="PWROPT-DCP" Name="topmodule_pwropt.dcp"/>
   <File Type="PWROPT-DRC" Name="topmodule_drc_pwropted.rpt"/>
   <File Type="PWROPT-TIMING" Name="topmodule_timing_summary_pwropted.rpt"/>
@@ -23,12 +21,11 @@
   <File Type="PLACE-SIMILARITY" Name="topmodule_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="topmodule_incremental_reuse_pre_placed.rpt"/>
   <File Type="PLACE-TIMING" Name="topmodule_timing_summary_placed.rpt"/>
+  <File Type="PLACE-RQA-PB" Name="topmodule_rqa_placed.pb"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="topmodule_postplace_pwropt.dcp"/>
-  <File Type="BG-BIN" Name="topmodule.bin"/>
   <File Type="POSTPLACE-PWROPT-TIMING" Name="topmodule_timing_summary_postplace_pwropted.rpt"/>
   <File Type="PHYSOPT-DCP" Name="topmodule_physopt.dcp"/>
   <File Type="PHYSOPT-DRC" Name="topmodule_drc_physopted.rpt"/>
-  <File Type="BITSTR-MSK" Name="topmodule.msk"/>
   <File Type="PHYSOPT-TIMING" Name="topmodule_timing_summary_physopted.rpt"/>
   <File Type="ROUTE-ERROR-DCP" Name="topmodule_routed_error.dcp"/>
   <File Type="ROUTE-DCP" Name="topmodule_routed.dcp"/>
@@ -36,10 +33,11 @@
   <File Type="ROUTE-DRC" Name="topmodule_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="topmodule_drc_routed.pb"/>
   <File Type="ROUTE-DRC-RPX" Name="topmodule_drc_routed.rpx"/>
-  <File Type="BITSTR-MMI" Name="topmodule.mmi"/>
   <File Type="ROUTE-METHODOLOGY-DRC" Name="topmodule_methodology_drc_routed.rpt"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="topmodule_methodology_drc_routed.rpx"/>
   <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="topmodule_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="topmodule_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="topmodule_power_summary_routed.pb"/>
   <File Type="ROUTE-PWR-RPX" Name="topmodule_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="topmodule_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="topmodule_route_status.pb"/>
@@ -51,6 +49,7 @@
   <File Type="ROUTE-BUS-SKEW" Name="topmodule_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="topmodule_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="topmodule_bus_skew_routed.rpx"/>
+  <File Type="ROUTE-RQS-PB" Name="topmodule_rqs_routed.pb"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="topmodule_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="topmodule_postroute_physopt_bb.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING" Name="topmodule_timing_summary_postroute_physopted.rpt"/>
@@ -58,11 +57,17 @@
   <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="topmodule_timing_summary_postroute_physopted.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="topmodule_bus_skew_postroute_physopted.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="topmodule_bus_skew_postroute_physopted.pb"/>
-  <File Type="BG-BIT" Name="topmodule.bit"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="topmodule_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BG-BIT" Name="topmodule.bit"/>
+  <File Type="BG-BIN" Name="topmodule.bin"/>
+  <File Type="BITSTR-MSK" Name="topmodule.msk"/>
   <File Type="BITSTR-RBT" Name="topmodule.rbt"/>
   <File Type="BITSTR-NKY" Name="topmodule.nky"/>
+  <File Type="BITSTR-BMM" Name="topmodule_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="topmodule.mmi"/>
   <File Type="PDI-FILE" Name="topmodule.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="topmodule_boot.pdi"/>
+  <File Type="PL-PDI-FILE" Name="topmodule_pld.pdi"/>
   <File Type="RCFI_FILE" Name="topmodule.rcfi"/>
   <File Type="CFI_FILE" Name="topmodule.cfi"/>
   <File Type="RNPI_FILE" Name="topmodule.rnpi"/>
@@ -75,16 +80,20 @@
   <File Type="BG-DRC" Name="topmodule.drc"/>
   <File Type="RDI-RDI" Name="topmodule.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+  <File Type="ROUTE-RQS" Name="topmodule_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="topmodule_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci">
+    <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_0_3/blk_mem_gen_0.xci">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/dct_top.v">
+    <File Path="$PSRCDIR/sources_1/new/dct_top_2.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -119,8 +128,23 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/slow_clock.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/topmodule.v">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/dct_top.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -138,7 +162,7 @@
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
-  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
     <Filter Type="Constrs"/>
     <File Path="$PSRCDIR/constrs_1/new/consts.xdc">
       <FileInfo>
@@ -151,7 +175,7 @@
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
-  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
     <Filter Type="Utils"/>
     <Config>
       <Option Name="TopAutoSet" Val="TRUE"/>
@@ -167,7 +191,9 @@
     <Step Id="phys_opt_design" EnableStepBool="1"/>
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
-    <Step Id="write_bitstream"/>
+    <Step Id="write_bitstream">
+      <Option Id="VerboseBool">1</Option>
+    </Step>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_1"/>
 </GenRun>

@@ -1,12 +1,13 @@
-Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Mon Apr  7 21:42:50 2025
-| Host         : LAPTOP-G38HQLEP running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2024.2.1 (win64) Build 5266912 Sun Dec 15 09:03:24 MST 2024
+| Date         : Wed Apr 16 14:07:06 2025
+| Host         : Romits-Laptop running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file topmodule_timing_summary_routed.rpt -pb topmodule_timing_summary_routed.pb -rpx topmodule_timing_summary_routed.rpx -warn_on_violation
 | Design       : topmodule
 | Device       : 7a35t-cpg236
 | Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Timing Summary Report
@@ -26,6 +27,7 @@ Timing Summary Report
   Timing Early Launch at Borrowing Latches   :  No
   Borrow Time for Max Delay Exceptions       :  Yes
   Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
 
   Corner  Analyze    Analyze    
   Name    Max Paths  Min Paths  
@@ -34,55 +36,71 @@ Timing Summary Report
   Fast    Yes        Yes        
 
 
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity          Description                  Violations  
+---------  ----------------  ---------------------------  ----------  
+TIMING-17  Critical Warning  Non-clocked sequential cell  1000        
+DPIR-1     Warning           Asynchronous driver check    213         
+SYNTH-9    Warning           Small multiplier             132         
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
 
 check_timing report
 
 Table of Contents
 -----------------
-1. checking no_clock
-2. checking constant_clock
-3. checking pulse_width_clock
-4. checking unconstrained_internal_endpoints
-5. checking no_input_delay
-6. checking no_output_delay
-7. checking multiple_clock
-8. checking generated_clocks
-9. checking loops
-10. checking partial_input_delay
-11. checking partial_output_delay
-12. checking latch_loops
+1. checking no_clock (9934)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (30636)
+5. checking no_input_delay (4)
+6. checking no_output_delay (11)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
 
-1. checking no_clock
---------------------
- There are 1334 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+1. checking no_clock (9934)
+---------------------------
+ There are 210 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+
+ There are 9724 register/latch pins with no clock driven by root clock pin: slow_clk/slow_clk_reg/Q (HIGH)
 
 
-2. checking constant_clock
---------------------------
+2. checking constant_clock (0)
+------------------------------
  There are 0 register/latch pins with constant_clock.
 
 
-3. checking pulse_width_clock
------------------------------
+3. checking pulse_width_clock (0)
+---------------------------------
  There are 0 register/latch pins which need pulse_width check
 
 
-4. checking unconstrained_internal_endpoints
---------------------------------------------
- There are 4058 pins that are not constrained for maximum delay. (HIGH)
+4. checking unconstrained_internal_endpoints (30636)
+----------------------------------------------------
+ There are 30636 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
 
-5. checking no_input_delay
---------------------------
+5. checking no_input_delay (4)
+------------------------------
  There are 4 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 
 
-6. checking no_output_delay
----------------------------
+6. checking no_output_delay (11)
+--------------------------------
  There are 11 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
@@ -90,33 +108,33 @@ Table of Contents
  There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
 
 
-7. checking multiple_clock
---------------------------
+7. checking multiple_clock (0)
+------------------------------
  There are 0 register/latch pins with multiple clocks.
 
 
-8. checking generated_clocks
-----------------------------
+8. checking generated_clocks (0)
+--------------------------------
  There are 0 generated clocks that are not connected to a clock source.
 
 
-9. checking loops
------------------
+9. checking loops (0)
+---------------------
  There are 0 combinational loops in the design.
 
 
-10. checking partial_input_delay
---------------------------------
+10. checking partial_input_delay (0)
+------------------------------------
  There are 0 input ports with partial input delay specified.
 
 
-11. checking partial_output_delay
----------------------------------
+11. checking partial_output_delay (0)
+-------------------------------------
  There are 0 ports with partial output delay specified.
 
 
-12. checking latch_loops
-------------------------
+12. checking latch_loops (0)
+----------------------------
  There are 0 combinational latch loops in the design through latch input
 
 
@@ -131,7 +149,7 @@ Table of Contents
          NA           NA                     NA                   NA           NA           NA                     NA                   NA           NA           NA                      NA                    NA  
 
 
-There are no user specified timing constraints.
+All user specified timing constraints are met.
 
 
 ------------------------------------------------------------------------------------------------

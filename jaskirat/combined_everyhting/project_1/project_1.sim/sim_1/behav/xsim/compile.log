@@ -1,0 +1,27 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_bindec
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_mux
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized0
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized1
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized2
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized3
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized4
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized5
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized6
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized7
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized0
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized1
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized2
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized3
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized4
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized5
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized6
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized7
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_v8_4_10
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_v8_4_10_synth
+INFO: [VRFC 10-311] analyzing module glbl

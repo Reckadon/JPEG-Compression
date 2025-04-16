@@ -1,8 +1,8 @@
-Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
--------------------------------------------------------------------------------------------------
-| Tool Version              : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date                      : Mon Apr  7 21:42:36 2025
-| Host                      : LAPTOP-G38HQLEP running 64-bit major release  (build 9200)
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version              : Vivado v.2024.2.1 (win64) Build 5266912 Sun Dec 15 09:03:24 MST 2024
+| Date                      : Wed Apr 16 14:06:04 2025
+| Host                      : Romits-Laptop running 64-bit major release  (build 9200)
 | Command                   : report_io -file topmodule_io_placed.rpt
 | Design                    : topmodule
 | Device                    : xc7a35t
@@ -10,7 +10,7 @@ Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 | Package                   : cpg236
 | Package Version           : FINAL 2014-02-19
 | Package Pin Delay Version : VERS. 2.0 2014-02-19
--------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 IO Information
 

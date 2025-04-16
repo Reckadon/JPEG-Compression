@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2.1 (64-bit)
+# SW Build 5266912 on Sun Dec 15 09:03:24 MST 2024
+# IP Build 5264866 on Sun Dec 15 16:27:47 MST 2024
+# SharedData Build 5264680 on Wed Dec 11 12:48:36 MST 2024
+# Start of session at: Wed Apr 16 14:51:11 2025
+# Process ID         : 52256
+# Current directory  : D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/Vivado_Project_JPEG_Compression/Vivado_Project_JPEG_Compression.runs/impl_1
+# Command line       : vivado.exe -log topmodule.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source topmodule.tcl -notrace
+# Log file           : D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/Vivado_Project_JPEG_Compression/Vivado_Project_JPEG_Compression.runs/impl_1/topmodule.vdi
+# Journal file       : D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/Vivado_Project_JPEG_Compression/Vivado_Project_JPEG_Compression.runs/impl_1\vivado.jou
+# Running On         : Romits-Laptop
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : AMD Ryzen 5 4600H with Radeon Graphics         
+# CPU Frequency      : 2994 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 17042 MB
+# Swap memory        : 58256 MB
+# Total Virtual      : 75299 MB
+# Available Virtual  : 19861 MB
+#-----------------------------------------------------------
+source topmodule.tcl -notrace

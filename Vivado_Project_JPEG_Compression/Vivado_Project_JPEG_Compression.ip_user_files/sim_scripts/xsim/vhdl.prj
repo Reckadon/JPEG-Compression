@@ -1,0 +1,5 @@
+vhdl xpm  \
+"E:/Vivado/2024.2/data/ip/xpm/xpm_VCOMP.vhd" \
+
+# Do not sort compile order
+nosort

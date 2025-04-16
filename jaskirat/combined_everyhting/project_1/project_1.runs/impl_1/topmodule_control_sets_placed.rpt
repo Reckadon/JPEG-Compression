@@ -1,12 +1,12 @@
-Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
---------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Mon Apr  7 21:42:36 2025
-| Host         : LAPTOP-G38HQLEP running 64-bit major release  (build 9200)
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2.1 (win64) Build 5266912 Sun Dec 15 09:03:24 MST 2024
+| Date         : Wed Apr 16 14:06:04 2025
+| Host         : Romits-Laptop running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file topmodule_control_sets_placed.rpt
 | Design       : topmodule
 | Device       : xc7a35t
---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------
 
 Control Set Information
 
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    95 |
-|    Minimum number of control sets                        |    95 |
+| Total control sets                                       |   107 |
+|    Minimum number of control sets                        |   107 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    95 |
+| Unused register locations in slices containing registers |   139 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    95 |
-| >= 0 to < 4        |     2 |
-| >= 4 to < 6        |     4 |
-| >= 6 to < 8        |     4 |
-| >= 8 to < 10       |    72 |
-| >= 10 to < 12      |     1 |
+| Total control sets |   107 |
+| >= 0 to < 4        |     3 |
+| >= 4 to < 6        |     3 |
+| >= 6 to < 8        |     3 |
+| >= 8 to < 10       |    71 |
+| >= 10 to < 12      |     3 |
 | >= 12 to < 14      |     1 |
 | >= 14 to < 16      |     6 |
-| >= 16              |     5 |
+| >= 16              |    17 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,116 +58,128 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              17 |            6 |
-| No           | No                    | Yes                    |              12 |            5 |
-| No           | Yes                   | No                     |              29 |            9 |
-| Yes          | No                    | No                     |             127 |           33 |
-| Yes          | No                    | Yes                    |            1120 |          252 |
-| Yes          | Yes                   | No                     |              16 |            3 |
+| No           | No                    | No                     |              28 |           14 |
+| No           | No                    | Yes                    |              14 |            5 |
+| No           | Yes                   | No                     |              37 |           11 |
+| Yes          | No                    | No                     |            6584 |         1820 |
+| Yes          | No                    | Yes                    |            1337 |          353 |
+| Yes          | Yes                   | No                     |            1845 |          653 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------+-----------------------------------------------------------+----------------------------------+------------------+----------------+
-|  Clock Signal  |                       Enable Signal                       |         Set/Reset Signal         | Slice Load Count | Bel Load Count |
-+----------------+-----------------------------------------------------------+----------------------------------+------------------+----------------+
-|  clk_IBUF_BUFG |                                                           | uut2/TxD_i_1_n_0                 |                1 |              1 |
-|  clk_IBUF_BUFG | uut1/ImRxComplete_i_1_n_0                                 |                                  |                1 |              1 |
-|  clk_IBUF_BUFG | dct_inst/dct_process/mult2/k[3]_i_1__0_n_0                | dct_inst/dct_process/mult1/AR[0] |                1 |              4 |
-|  clk_IBUF_BUFG | dct_inst/dct_process/mult1/k[3]_i_1_n_0                   | dct_inst/dct_process/mult1/AR[0] |                1 |              4 |
-|  clk_IBUF_BUFG | uut1/bitcounter                                           | uut1/bitcounter[3]_i_1_n_0       |                1 |              4 |
-|  clk_IBUF_BUFG | uut2/bitcounter                                           | uut2/bitcounter[3]_i_1__0_n_0    |                1 |              4 |
-|  clk_IBUF_BUFG | dct_inst/dct_process/mult1/FSM_onehot_state[3]_i_1_n_0    | dct_inst/dct_process/mult1/AR[0] |                2 |              6 |
-|  clk_IBUF_BUFG | dct_inst/dct_process/mult2/FSM_onehot_state[3]_i_1__0_n_0 | dct_inst/dct_process/mult1/AR[0] |                1 |              6 |
-|  clk_IBUF_BUFG | ena_processed_reg_n_0                                     |                                  |                2 |              6 |
-|  clk_IBUF_BUFG | ena_top                                                   |                                  |                2 |              6 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[15]_i_1_n_0                         | dct_inst/dct_process/mult1/AR[0] |                1 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[175]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                2 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[31]_i_1_n_0                         | dct_inst/dct_process/mult1/AR[0] |                3 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[191]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                3 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[207]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                1 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[223]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                1 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[239]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                1 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[127]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                4 |              8 |
-|  clk_IBUF_BUFG | dct_inst/block_count                                      | dct_inst/dct_process/mult1/AR[0] |                2 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[479]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                1 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[863]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                3 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[943]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                1 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[47]_i_1_n_0                         | dct_inst/dct_process/mult1/AR[0] |                3 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[383]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                3 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[511]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                3 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[463]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                2 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[63]_i_1_n_0                         | dct_inst/dct_process/mult1/AR[0] |                1 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[767]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                2 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[655]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                2 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[559]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                2 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[815]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                2 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[623]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                2 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[911]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                2 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[879]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                2 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[335]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                3 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[607]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                3 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[95]_i_1_n_0                         | dct_inst/dct_process/mult1/AR[0] |                2 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[959]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                2 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[975]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                1 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[895]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                2 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[367]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                2 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[303]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                2 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[351]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                1 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[575]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                4 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[639]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                1 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[687]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                2 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[719]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                1 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[735]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                1 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[415]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                2 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[431]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                3 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[543]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                2 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[671]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                2 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[703]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                2 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[799]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                3 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[495]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                2 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[79]_i_1_n_0                         | dct_inst/dct_process/mult1/AR[0] |                2 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[319]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                1 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[847]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                2 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[287]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                1 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[399]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                1 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[783]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                2 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[271]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                1 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[255]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                1 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[447]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                2 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[527]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                2 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[591]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                1 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[831]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                1 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[927]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                2 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[751]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                1 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[991]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                2 |              8 |
-|  clk_IBUF_BUFG | uut1/din[7]_i_1_n_0                                       |                                  |                1 |              8 |
-|  clk_IBUF_BUFG | dct_inst/state1                                           | dct_inst/dct_process/mult1/AR[0] |                2 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[1007]_i_1_n_0                       | dct_inst/dct_process/mult1/AR[0] |                2 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[143]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                1 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[159]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                4 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[111]_i_1_n_0                        | dct_inst/dct_process/mult1/AR[0] |                2 |              8 |
-|  clk_IBUF_BUFG | dout_imtx[7]_i_1_n_0                                      |                                  |                3 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_block_in[1023]_i_1_n_0                       | dct_inst/dct_process/mult1/AR[0] |                2 |              8 |
-|  clk_IBUF_BUFG | ena_processed_i_1_n_0                                     | din_processed[7]_i_1_n_0         |                1 |              8 |
-|  clk_IBUF_BUFG | dct_inst/dct_process/dct_start_reg                        | dct_inst/dct_process/mult1/AR[0] |                3 |              9 |
-|  clk_IBUF_BUFG | uut1/rxshiftreg[9]_i_1_n_0                                |                                  |                3 |              9 |
-|  clk_IBUF_BUFG | dout_dct_orig[7]_i_1_n_0                                  |                                  |                2 |              9 |
-|  clk_IBUF_BUFG | uut2/rightshiftreg                                        |                                  |                2 |             10 |
-|  clk_IBUF_BUFG |                                                           | dct_inst/dct_process/mult1/AR[0] |                5 |             12 |
-|  clk_IBUF_BUFG | uut1/addr1[13]_i_1_n_0                                    |                                  |                4 |             14 |
-|  clk_IBUF_BUFG | dct_inst/overall_pixel                                    | dct_inst/dct_process/mult1/AR[0] |                2 |             14 |
-|  clk_IBUF_BUFG | dct_inst/orig_addr[13]_i_1_n_0                            | dct_inst/dct_process/mult1/AR[0] |                3 |             14 |
-|  clk_IBUF_BUFG |                                                           | uut2/counter[0]_i_1__0_n_0       |                4 |             14 |
-|  clk_IBUF_BUFG |                                                           | uut1/counter[0]_i_1_n_0          |                4 |             14 |
-|  clk_IBUF_BUFG | uut2/address                                              |                                  |                4 |             15 |
-|  clk_IBUF_BUFG |                                                           |                                  |                6 |             17 |
-|  clk_IBUF_BUFG | ena_processed_i_1_n_0                                     |                                  |                4 |             17 |
-|  clk_IBUF_BUFG | dct_inst/proc1_addr[14]_i_1_n_0                           | dct_inst/dct_process/mult1/AR[0] |                5 |             23 |
-|  clk_IBUF_BUFG | wea_top                                                   |                                  |                5 |             24 |
-|  clk_IBUF_BUFG | dct_inst/dct_process/E[0]                                 | dct_inst/dct_process/mult1/AR[0] |              107 |            512 |
-+----------------+-----------------------------------------------------------+----------------------------------+------------------+----------------+
++----------------+-------------------------------------------------------------+----------------------------------------------------------+------------------+----------------+--------------+
+|  Clock Signal  |                        Enable Signal                        |                     Set/Reset Signal                     | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+-------------------------------------------------------------+----------------------------------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG | uut1/ImRxComplete_i_1_n_0                                   |                                                          |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG |                                                             | uut2/TxD_i_1_n_0                                         |                1 |              1 |         1.00 |
+|  s_clk_BUFG    | dct_inst/block_count[7]_i_1_n_0                             | dct_inst/block_count[5]_i_1_n_0                          |                1 |              1 |         1.00 |
+|  s_clk_BUFG    | dct_inst/state[3]_i_1_n_0                                   |                                                          |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | uut2/bitcounter                                             | uut2/bitcounter[3]_i_1__0_n_0                            |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | uut1/bitcounter                                             | uut1/bitcounter[3]_i_1_n_0                               |                1 |              4 |         4.00 |
+|  s_clk_BUFG    | dct_inst/block_count[7]_i_1_n_0                             |                                                          |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | ena_top                                                     |                                                          |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | ena_processed_reg_n_0                                       |                                                          |                2 |              6 |         3.00 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[671]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                4 |              8 |         2.00 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[1023]_i_1_n_0                         | dct_inst/dct_block_out__0                                |                2 |              8 |         4.00 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[191]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                2 |              8 |         4.00 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[927]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                3 |              8 |         2.67 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[767]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                3 |              8 |         2.67 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[719]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | uut1/din[7]_i_1_n_0                                         |                                                          |                2 |              8 |         4.00 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[703]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                5 |              8 |         1.60 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[799]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                3 |              8 |         2.67 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[255]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG | ena_processed_i_1_n_0                                       | din_processed[7]_i_1_n_0                                 |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | dout_imtx[7]_i_1_n_0                                        |                                                          |                4 |              8 |         2.00 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[847]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                3 |              8 |         2.67 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[863]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                5 |              8 |         1.60 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[95]_i_1_n_0                           | dct_inst/dct_block_out__0                                |                4 |              8 |         2.00 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[991]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                3 |              8 |         2.67 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[815]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                6 |              8 |         1.33 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[911]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                5 |              8 |         1.60 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[751]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                3 |              8 |         2.67 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[975]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                3 |              8 |         2.67 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[735]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                2 |              8 |         4.00 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[895]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                3 |              8 |         2.67 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[959]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                3 |              8 |         2.67 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[879]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                4 |              8 |         2.00 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[79]_i_1_n_0                           | dct_inst/dct_block_out__0                                |                4 |              8 |         2.00 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[783]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                6 |              8 |         1.33 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[831]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                5 |              8 |         1.60 |
+|  s_clk_BUFG    | dct_inst/wait_time[7]_i_1_n_0                               | dct_inst/wait_time                                       |                5 |              8 |         1.60 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[47]_i_1_n_0                           | dct_inst/dct_block_out__0                                |                5 |              8 |         1.60 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[559]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                4 |              8 |         2.00 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[127]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                3 |              8 |         2.67 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[111]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                5 |              8 |         1.60 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[223]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                2 |              8 |         4.00 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[239]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                2 |              8 |         4.00 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[271]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                2 |              8 |         4.00 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[383]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                2 |              8 |         4.00 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[63]_i_1_n_0                           | dct_inst/dct_block_out__0                                |                5 |              8 |         1.60 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[687]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                6 |              8 |         1.33 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[1007]_i_1_n_0                         | dct_inst/dct_block_out__0                                |                4 |              8 |         2.00 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[303]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                2 |              8 |         4.00 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[463]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                4 |              8 |         2.00 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[495]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                3 |              8 |         2.67 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[319]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                1 |              8 |         8.00 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[511]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                4 |              8 |         2.00 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[943]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                5 |              8 |         1.60 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[15]_i_1_n_0                           | dct_inst/dct_block_out__0                                |                2 |              8 |         4.00 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[31]_i_1_n_0                           | dct_inst/dct_block_out__0                                |                2 |              8 |         4.00 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[591]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                5 |              8 |         1.60 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[607]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                3 |              8 |         2.67 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[351]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                2 |              8 |         4.00 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[639]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                3 |              8 |         2.67 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[527]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                4 |              8 |         2.00 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[143]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                2 |              8 |         4.00 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[175]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                3 |              8 |         2.67 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[287]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                2 |              8 |         4.00 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[207]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                2 |              8 |         4.00 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[399]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                3 |              8 |         2.67 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[159]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                3 |              8 |         2.67 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[447]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                2 |              8 |         4.00 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[479]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                3 |              8 |         2.67 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[543]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                3 |              8 |         2.67 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[367]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                3 |              8 |         2.67 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[335]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                2 |              8 |         4.00 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[415]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                3 |              8 |         2.67 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[431]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                2 |              8 |         4.00 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[575]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                4 |              8 |         2.00 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[623]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                4 |              8 |         2.00 |
+|  s_clk_BUFG    | dct_inst/dct_block_in[655]_i_1_n_0                          | dct_inst/dct_block_out__0                                |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | uut1/rxshiftreg[9]_i_1_n_0                                  |                                                          |                2 |              9 |         4.50 |
+|  clk_IBUF_BUFG | dout_dct_orig[7]_i_1_n_0                                    |                                                          |                2 |              9 |         4.50 |
+|  s_clk_BUFG    | dct_inst/CEA2                                               | dct_inst/pixel_count[5]_i_1_n_0                          |                4 |              9 |         2.25 |
+|  clk_IBUF_BUFG |                                                             | slow_clk/counter[9]_i_1_n_0                              |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG | uut2/rightshiftreg                                          |                                                          |                2 |             10 |         5.00 |
+|  s_clk_BUFG    |                                                             |                                                          |                8 |             11 |         1.38 |
+|  clk_IBUF_BUFG |                                                             | uut1/counter[0]_i_1__0_n_0                               |                3 |             12 |         4.00 |
+|  clk_IBUF_BUFG |                                                             | uut2/counter[0]_i_1__1_n_0                               |                4 |             14 |         3.50 |
+|  clk_IBUF_BUFG | uut1/addr1[13]_i_1_n_0                                      |                                                          |                4 |             14 |         3.50 |
+|  s_clk_BUFG    |                                                             | dct_inst/process_reset                                   |                5 |             14 |         2.80 |
+|  s_clk_BUFG    | dct_inst/overall_pixel[0]_i_1_n_0                           | dct_inst/dct_block_out__0                                |                4 |             14 |         3.50 |
+|  s_clk_BUFG    | dct_inst/orig_addr[13]_i_1_n_0                              | dct_inst/dct_block_out__0                                |                4 |             14 |         3.50 |
+|  clk_IBUF_BUFG | uut2/address                                                |                                                          |                4 |             15 |         3.75 |
+|  clk_IBUF_BUFG |                                                             |                                                          |                6 |             17 |         2.83 |
+|  clk_IBUF_BUFG | ena_processed_i_1_n_0                                       |                                                          |                6 |             17 |         2.83 |
+|  s_clk_BUFG    | dct_inst/CEP                                                | dct_inst/dct_block_out__0                                |                9 |             23 |         2.56 |
+|  clk_IBUF_BUFG | wea_top                                                     |                                                          |                7 |             24 |         3.43 |
+|  s_clk_BUFG    | dct_inst/dct_process/mult2/k[3]_i_1__0_n_0                  | dct_inst/process_reset                                   |               12 |             26 |         2.17 |
+|  s_clk_BUFG    | dct_inst/dct_process/mult1/k[3]_i_1_n_0                     | dct_inst/process_reset                                   |               20 |             52 |         2.60 |
+|  s_clk_BUFG    | dct_inst/dct_process/mult1/FSM_sequential_state_reg[1]_0[0] | dct_inst/dct_process/mult1/FSM_sequential_state_reg[1]_1 |               47 |            224 |         4.77 |
+|  s_clk_BUFG    | dct_inst/dct_process/mult1/FSM_sequential_state_reg[1]_0[0] |                                                          |               48 |            289 |         6.02 |
+|  s_clk_BUFG    | dct_inst/dct_process/mult1/matB[0][0][15]_i_1_n_0           |                                                          |              128 |            517 |         4.04 |
+|  s_clk_BUFG    | dct_inst/dct_process/mult1/FSM_sequential_state_reg[1]_2    | dct_inst/process_reset                                   |              143 |            558 |         3.90 |
+|  s_clk_BUFG    | dct_inst/dct_process/mult2/FSM_sequential_state_reg[1]_0    | dct_inst/process_reset                                   |              178 |            701 |         3.94 |
+|  s_clk_BUFG    | dct_inst/dct_process/mult1/E[0]                             |                                                          |              340 |           1024 |         3.01 |
+|  s_clk_BUFG    | dct_inst/dct_process/mult1/C[1023]_i_1_n_0                  |                                                          |              249 |           1024 |         4.11 |
+|  s_clk_BUFG    | dct_inst/dct_process/mult2/C[1023]_i_1__0_n_0               |                                                          |              270 |           1024 |         3.79 |
+|  s_clk_BUFG    | dct_inst/dct_process/mult2/E[0]                             |                                                          |              313 |           1024 |         3.27 |
+|  s_clk_BUFG    | dct_inst/wait_time                                          | dct_inst/dct_block_out__0                                |              363 |           1024 |         2.82 |
+|  s_clk_BUFG    | dct_inst/dct_process/mult2/matA[0][0][15]_i_1_n_0           |                                                          |              429 |           1545 |         3.60 |
++----------------+-------------------------------------------------------------+----------------------------------------------------------+------------------+----------------+--------------+
 
 

@@ -1,12 +1,24 @@
 #-----------------------------------------------------------
-# Vivado v2019.2 (64-bit)
-# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
-# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Mon Apr  7 21:41:26 2025
-# Process ID: 32740
-# Current directory: C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.runs/synth_1
-# Command line: vivado.exe -log topmodule.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source topmodule.tcl
-# Log file: C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.runs/synth_1/topmodule.vds
-# Journal file: C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.runs/synth_1\vivado.jou
+# Vivado v2024.2.1 (64-bit)
+# SW Build 5266912 on Sun Dec 15 09:03:24 MST 2024
+# IP Build 5264866 on Sun Dec 15 16:27:47 MST 2024
+# SharedData Build 5264680 on Wed Dec 11 12:48:36 MST 2024
+# Start of session at: Wed Apr 16 14:03:28 2025
+# Process ID         : 46028
+# Current directory  : D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.runs/synth_1
+# Command line       : vivado.exe -log topmodule.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source topmodule.tcl
+# Log file           : D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.runs/synth_1/topmodule.vds
+# Journal file       : D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.runs/synth_1\vivado.jou
+# Running On         : Romits-Laptop
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : AMD Ryzen 5 4600H with Radeon Graphics         
+# CPU Frequency      : 2994 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 17042 MB
+# Swap memory        : 58256 MB
+# Total Virtual      : 75299 MB
+# Available Virtual  : 22485 MB
 #-----------------------------------------------------------
 source topmodule.tcl -notrace

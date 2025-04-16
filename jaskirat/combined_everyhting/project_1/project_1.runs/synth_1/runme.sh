@@ -3,7 +3,8 @@
 # 
 # Vivado(TM)
 # runme.sh: a Vivado-generated Runs Script for UNIX
-# Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+# Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+# Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 # 
 
 echo "This script was generated under a different operating system."
@@ -11,9 +12,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=D:/Xilinx/Vivado/2019.2/ids_lite/ISE/bin/nt64;D:/Xilinx/Vivado/2019.2/ids_lite/ISE/lib/nt64:D:/Xilinx/Vivado/2019.2/bin
+  PATH=E:/Vitis/2024.2/bin;E:/Vivado/2024.2/ids_lite/ISE/bin/nt64;E:/Vivado/2024.2/ids_lite/ISE/lib/nt64:E:/Vivado/2024.2/bin
 else
-  PATH=D:/Xilinx/Vivado/2019.2/ids_lite/ISE/bin/nt64;D:/Xilinx/Vivado/2019.2/ids_lite/ISE/lib/nt64:D:/Xilinx/Vivado/2019.2/bin:$PATH
+  PATH=E:/Vitis/2024.2/bin;E:/Vivado/2024.2/ids_lite/ISE/bin/nt64;E:/Vivado/2024.2/ids_lite/ISE/lib/nt64:E:/Vivado/2024.2/bin:$PATH
 fi
 export PATH
 
@@ -24,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/uart/soham/project_1/project_1.runs/synth_1'
+HD_PWD='D:/College - IIT Gn/Sem 4/Digital Systems/JPEG-Compression-Project/jaskirat/combined_everyhting/project_1/project_1.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

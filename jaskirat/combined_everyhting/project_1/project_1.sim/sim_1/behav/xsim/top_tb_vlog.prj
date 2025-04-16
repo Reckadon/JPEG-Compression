@@ -1,0 +1,17 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../project_1.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1_sim_netlist.v" \
+"../../../../project_1.gen/sources_1/ip/blk_mem_gen_0_3/blk_mem_gen_0_sim_netlist.v" \
+"../../../../project_1.srcs/sources_1/new/dct_top.v" \
+"../../../../project_1.srcs/sources_1/new/do_dct.v" \
+"../../../../project_1.srcs/sources_1/new/imrx.v" \
+"../../../../project_1.srcs/sources_1/new/imtx.v" \
+"../../../../project_1.srcs/sources_1/new/matmul.v" \
+"../../../../project_1.srcs/sources_1/new/topmodule.v" \
+"../../../../project_1.srcs/sim_1/new/top_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

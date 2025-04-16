@@ -1,0 +1,37 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2.1 (win64) Build 5266912 Sun Dec 15 09:03:24 MST 2024
+| Date         : Thu Apr 10 14:00:37 2025
+| Host         : Romits-Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a35tcpg236-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'blk_mem_gen_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of blk_mem_gen_1 (xilinx.com:ip:blk_mem_gen:8.4) from (Rev. 4) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2.1 (win64) Build 5266912 Sun Dec 15 09:03:24 MST 2024
+| Date         : Thu Apr 10 14:00:36 2025
+| Host         : Romits-Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a35tcpg236-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'blk_mem_gen_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of blk_mem_gen_0 (xilinx.com:ip:blk_mem_gen:8.4) from (Rev. 4) to (Rev. 10)
+

@@ -1,0 +1,37 @@
+transcript off
+onbreak {quit -force}
+onerror {quit -force}
+transcript on
+
+vlib work
+vlib riviera/xpm
+vlib riviera/blk_mem_gen_v8_4_10
+vlib riviera/xil_defaultlib
+
+vmap xpm riviera/xpm
+vmap blk_mem_gen_v8_4_10 riviera/blk_mem_gen_v8_4_10
+vmap xil_defaultlib riviera/xil_defaultlib
+
+vlog -work xpm  -incr -l xpm -l blk_mem_gen_v8_4_10 -l xil_defaultlib \
+"E:/Vivado/2024.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
+
+vcom -work xpm -93  -incr \
+"E:/Vivado/2024.2/data/ip/xpm/xpm_VCOMP.vhd" \
+
+vlog -work blk_mem_gen_v8_4_10  -incr -v2k5 -l xpm -l blk_mem_gen_v8_4_10 -l xil_defaultlib \
+"../../ipstatic/simulation/blk_mem_gen_v8_4.v" \
+
+vlog -work xil_defaultlib  -incr -v2k5 -l xpm -l blk_mem_gen_v8_4_10 -l xil_defaultlib \
+"../../../Vivado_Project_JPEG_Compression.gen/sources_1/ip/blk_mem_gen_1/sim/blk_mem_gen_1.v" \
+"../../../Vivado_Project_JPEG_Compression.gen/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v" \
+"../../../../jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/dct_top_2.v" \
+"../../../../jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/do_dct.v" \
+"../../../../jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/imrx.v" \
+"../../../../jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/imtx.v" \
+"../../../../jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/matmul.v" \
+"../../../../jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/slow_clock.v" \
+"../../../../jaskirat/combined_everyhting/project_1/project_1.srcs/sources_1/new/topmodule.v" \
+
+vlog -work xil_defaultlib \
+"glbl.v"
+
