@@ -10,7 +10,7 @@ for port, desc, hwid in sorted(ports):
 
 quantization = True
 
-port = 'COM8'
+port = 'COM4'
 send_timing = 0.0015
 recieve_timing = 0.001
 
