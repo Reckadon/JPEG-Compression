@@ -7,6 +7,13 @@ JPEG Compression Algorithm (DCT and Quantization) implemented on FPGA | ES 204: 
 1. [dracarys.bit](./Bitstreams/dracarys.bit): No Quantization
 2. [detonator.bit](./Bitstreams/detonator.bit): With Quantization
 
+## Video and presentation:
+[![Watch the video](https://img.youtube.com/vi/_Ano39_kA1w/0.jpg)](https://www.youtube.com/watch?v=_Ano39_kA1w)
+
+[Presentation](https://www.canva.com/design/DAGkuWgS-is/WxdCt2a7nolLvSmqmy2Dag/view?utm_content=DAGkuWgS-is&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h61644424b7)
+
+
+
 ## Tests
 
 ### No divider quantization, but with top k:
