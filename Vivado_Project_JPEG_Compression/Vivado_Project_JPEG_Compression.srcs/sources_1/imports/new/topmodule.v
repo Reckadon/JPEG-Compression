@@ -150,12 +150,6 @@ always @(posedge clk) begin
         addr_processed <= addr_imtx;
         din_processed <= din_imtx; 
         dout_imtx <= dout_processed;
-
-//        ena_top <= ena_imtx;     // Enable read from BRAM controlled by transmitter
-//        wea_top <= wea_imtx;         // Ensure BRAM is in read mode
-//        addr_top <= addr_imtx;   // Use transmitter's address for reading
-//        din_top<= din_imtx; 
-//        dout_imtx <= dout_top;
     end
 end
 
