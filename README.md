@@ -2,6 +2,8 @@
 
 JPEG Compression Algorithm (DCT and Quantization) implemented on FPGA | ES 204: Digital Systems Course Project | Prof. Joycee Mekie
 
+Vivado project (made in Vivado 2024) with all the code files can be found in [Vivado Project JPEG Compression](https://github.com/Reckadon/JPEG-Compression/tree/main/Vivado_Project_JPEG_Compression) folder.
+
 ## Bitstream:
 
 1. [dracarys.bit](./Bitstreams/dracarys.bit): No Quantization
