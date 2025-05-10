@@ -9,7 +9,7 @@
     <Object name="xc7a35t_0" gui_info="">
       <Properties Property="FULL_PROBES.FILE" value=""/>
       <Properties Property="PROBES.FILE" value=""/>
-      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/topmodule.bit"/>
+      <Properties Property="PROGRAM.HW_BITSTREAM" value="C:/Users/GSRAJA/Desktop/IIT GN/sem 4/ES 204/Project/JPEG-Compression/Bitstreams/detonator.bit"/>
       <Properties Property="SLR.COUNT" value="1"/>
     </Object>
   </ObjectList>
